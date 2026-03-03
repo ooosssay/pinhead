@@ -6583,7 +6583,8 @@
       },
       {
         "oldId": "flower_boquette",
-        "newId": "flower_bouquet"
+        "newId": "flower_bouquet",
+        "issue": "1"
       },
       {
         "oldId": "plan_in_raised_planter",
@@ -6720,6 +6721,7 @@
       },
       {
         "newId": "loaf_of_bread_with_steam",
+        "issue": "3",
         "by": "@quincylvania"
       },
       {
@@ -6728,6 +6730,7 @@
       },
       {
         "newId": "loaf_of_pan_bread_with_steam",
+        "issue": "3",
         "by": "@quincylvania"
       },
       {
@@ -6740,11 +6743,13 @@
       },
       {
         "oldId": "car_profile",
-        "newId": "sedan"
+        "newId": "sedan",
+        "issue": "7"
       },
       {
         "oldId": "car_profile_with_raised_hood",
-        "newId": "sedan_with_raised_hood"
+        "newId": "sedan_with_raised_hood",
+        "issue": "7"
       },
       {
         "newId": "car_with_taxi_checkerboard",
@@ -6776,11 +6781,13 @@
       {
         "newId": "f22_raptor_fighter_jet",
         "src": "americana",
+        "issue": "4",
         "importBy": "@quincylvania",
         "americana": "poi_military_plane"
       },
       {
         "newId": "hospital_h",
+        "issue": "4",
         "by": "@quincylvania",
         "americana": "poi_hospital",
         "nps": "hospital"
@@ -6788,6 +6795,7 @@
       {
         "newId": "bus",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": "bus_with_destination_display",
         "americana": [
           "poi_bus",
@@ -6797,6 +6805,7 @@
       {
         "newId": "dome_with_flag",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": [
           "classical_building_with_dome_and_flag",
           "https://raw.githubusercontent.com/osm-americana/openstreetmap-americana/94ec9f740619f3cd09fb0877487fe180df2fe62b/icons/poi_town_hall.svg"
@@ -6806,12 +6815,14 @@
       {
         "newId": "book_with_raised_cover",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_book_upright",
         "nps": "bookstore"
       },
       {
         "newId": "memorial_stone",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": "memorial_stone_with_inscription",
         "americana": "poi_gravestone"
       },
@@ -6822,6 +6833,7 @@
       },
       {
         "newId": "badge_shield",
+        "issue": "4",
         "src": "americana",
         "importBy": "@quincylvania",
         "americana": "poi_police_shield"
@@ -6829,6 +6841,7 @@
       {
         "newId": "badge_shield_with_fire",
         "src": "americana",
+        "issue": "4",
         "importBy": "@quincylvania",
         "americana": "poi_fire_station"
       },
@@ -6843,6 +6856,7 @@
       {
         "newId": "circle_outline_with_star",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": [
           "circle_outline",
           "star"
@@ -6852,6 +6866,7 @@
       {
         "newId": "cocktail_with_straw",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": [
           "cocktail",
           "https://raw.githubusercontent.com/osm-americana/openstreetmap-americana/55926e54bb3191d8deb2762283fcc0bc7d7ab0f1/icons/poi_martini_glass.svg"
@@ -6861,6 +6876,7 @@
       {
         "newId": "fork_crossing_knife",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": [
           "fork",
           "knife",
@@ -6874,6 +6890,7 @@
       {
         "newId": "sleepers_in_opposing_bunkbeds",
         "by": "@quincylvania",
+        "issue": "4",
         "inspo": [
           "sleepers_in_bunkbeds",
           "https://raw.githubusercontent.com/osm-americana/openstreetmap-americana/42499fb9a57dae4bf2bdb97050d3067455dd21eb/icons/poi_hostel.svg"
@@ -6883,6 +6900,7 @@
       {
         "newId": "square_dot",
         "src": "americana",
+        "issue": "4",
         "importBy": "@quincylvania",
         "americana": [
           "poi_square_dot",
@@ -6892,16 +6910,19 @@
       {
         "newId": "pennant_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_school"
       },
       {
         "newId": "star_and_crescent_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_muslim"
       },
       {
         "newId": "latin_cross_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_christian"
       },
       {
@@ -6912,6 +6933,7 @@
       {
         "newId": "flaming_chalice_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_uu"
       },
       {
@@ -6934,31 +6956,37 @@
       {
         "newId": "star_of_david_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_jewish"
       },
       {
         "newId": "dharma_wheel_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_buddhist"
       },
       {
         "newId": "yin_yang_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_taoist"
       },
       {
         "newId": "torii_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_shinto"
       },
       {
         "newId": "khanda_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_sikh"
       },
       {
         "newId": "om_on_square",
         "by": "@quincylvania",
+        "issue": "4",
         "americana": "poi_pow_hindu"
       }
     ]
@@ -6981,18 +7009,22 @@
       },
       {
         "newId": "terminal_screen_with_greater_than_prompt",
+        "issue": "17",
         "by": "@quincylvania"
       },
       {
         "newId": "terminal_screen_with_hash_prompt",
+        "issue": "17",
         "by": "@quincylvania"
       },
       {
         "newId": "terminal_screen_with_dollar_prompt",
+        "issue": "17",
         "by": "@quincylvania"
       },
       {
         "newId": "terminal_screen_with_percent_prompt",
+        "issue": "17",
         "by": "@quincylvania"
       },
       {
