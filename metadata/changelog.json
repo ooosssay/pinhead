@@ -7697,6 +7697,12 @@
           "ampersand"
         ],
         "osmcarto": "shop/department_store"
+      },
+      {
+        "newId": "music_notes_eighth",
+        "src": "osmcarto",
+        "importBy": "@quincylvania",
+        "osmcarto": "amenity/nightclub"
       }
     ]
   }
