@@ -7688,6 +7688,15 @@
           "heart"
         ],
         "osmcarto": "shop/charity"
+      },
+      {
+        "newId": "shopping_bag_with_ampersand",
+        "by": "@quincylvania",
+        "inspo": [
+          "shopping_bag",
+          "ampersand"
+        ],
+        "osmcarto": "shop/department_store"
       }
     ]
   }
