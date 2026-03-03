@@ -6401,14 +6401,7 @@
         "newId": "waterfall",
         "src": "maki",
         "importBy": "@quincylvania",
-        "maki": "waterfall",
-        "nps": "waterfall",
-        "opentrailmap": [
-          "waterfall",
-          "waterfall-canoeable",
-          "waterfall-hazard"
-        ],
-        "osmcarto": "natural/waterfall"
+        "maki": "waterfall"
       },
       {
         "newId": "waterfowl",
@@ -7585,6 +7578,29 @@
       {
         "newId": "flat_head_thumb_tack",
         "by": "@quincylvania"
+      },
+      {
+        "oldId": "waterfall",
+        "newId": "waterfall_with_froth",
+        "issue": "18"
+      },
+      {
+        "newId": "waterfall_into_water",
+        "issue": "18",
+        "src": "osmcarto",
+        "nps": "waterfall",
+        "opentrailmap": [
+          "waterfall",
+          "waterfall-canoeable",
+          "waterfall-hazard"
+        ],
+        "osmcarto": "natural/waterfall"
+      },
+      {
+        "newId": "waterfall",
+        "by": "@quincylvania",
+        "inspo": "waterfall_into_water",
+        "issue": "18"
       }
     ]
   }
