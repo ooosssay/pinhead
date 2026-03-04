@@ -19,9 +19,13 @@ Pinhead is a library of free vector icons. There are other projects like this, b
 
 Map icons need to be really small to support high visual density, so all of Pinhead icon's are intended to be legible at **15x15 pixels** minimum. This is much smaller than most other icon sets you'll find, but you can scale them up and they'll still look great. And since they're licensed **CC0**, you can use them anywhere for free without restrictions.
 
+## Community and support
+
+A small community is developing around Pinhead! We're working to make this the best and largest library of public domain map icons anywhere on the web, but we can't do it alone. Come join us in the [#pinhead](https://osmus.slack.com/archives/C0AH40E4J9W) channel on [OSM US Slack](https://slack.openstreetmap.us/). Bring your questions, comments, and ideas, or feel free to [open an issue](https://github.com/waysidemapping/pinhead/issues/new) on GitHub. You can also contact me (@quincylvania) directly through any of the channels listed on [my website](https://waysidemapping.org).
+
 ## Usage
 
-There are a few easy ways to get and use the icons depending on what you're trying to do.
+There are a few easy ways to access the icons depending on what you're trying to do.
 
 Visit [pinhead.ink](https://pinhead.ink) to browse the icons. Each icon has a download link, a copyable `<svg>` code, and an embeddable `<img>` code. These links are permanent and will not break in the future even if an icon is deleted or renamed, so feel to save, share, or embed them.
 
@@ -63,11 +67,11 @@ I've been cleaning up the seed icons by scaling them to the same size, conflatin
 
 If you know of other sources for public domain map icon that might be a good fit for Pinhead, I'd love to [hear about them](https://github.com/waysidemapping/pinhead/issues/new)!
 
-And finally, the icons come from the likes of you! I myself have been addings some totally new icons I've designed in support of [themap.is](https://github.com/waysidemapping/themap.is). I'm hoping for contributors to grow and sustain this icon library. Keep reading if you're interested.
+And finally, the icons come from the likes of you! I myself have been addings some totally new icons I've designed in support of [themap.is](https://github.com/waysidemapping/themap.is). I'm hoping for contributors to grow and sustain this icon library.
 
 ## Contributing
 
-Contributions to Pinhead are **open**. I'd love to make this the best and largest library of public domain map icons anywhere on the web, but I can't do it alone. If you have questions, comments, or art, by all means open an [issue](https://github.com/waysidemapping/pinhead/issues/new) or [pull request](https://github.com/waysidemapping/pinhead/pulls/new) :)
+Contributions to Pinhead are **open**. We'd love for you to be involved! If you'd like to add or improve some icons, by all means open a [pull request](https://github.com/waysidemapping/pinhead/pulls/new). See the [open issues](https://github.com/waysidemapping/pinhead/issues) to browse icons that folks have requested.
 
 ### Contributor FAQ 
 
