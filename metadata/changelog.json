@@ -7776,5 +7776,20 @@
         "inspo": "anchor"
       }
     ]
+  },
+  {
+    "majorVersion": "11",
+    "date": "",
+    "iconChanges": [
+      {
+        "newId": "house_with_flag_and_info_i",
+        "by": "@dschep",
+        "inspo": [
+          "house_with_flag",
+          "briefcase_with_info_i",
+          "https://raw.githubusercontent.com/nationalparkservice/symbol-library/89fe4d74d1017bba51bffab0eb458df084a21f82/src/standalone/visitor-center-black-14.svg"
+        ]
+      }
+    ]
   }
 ]
