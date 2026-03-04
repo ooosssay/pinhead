@@ -220,7 +220,11 @@ function printTextForChangelog(changelog) {
     console.log('### Added icons');
     console.log('');
     addedIcons.forEach(iconChange => {
-      console.log(`- <img src="https://pinhead.ink/v${newV}/${iconChange.newId}.svg" width="15px"/> Add \`${iconChange.newId}\``);
+      let str = `- <img src="https://pinhead.ink/v${newV}/${iconChange.newId}.svg" width="15px"/> Add \`${iconChange.newId}\``;
+      if (iconChange.by) {
+        str += ` by [${iconChange.by}](https://github.com/${iconChange.by.slice(1)})`;
+      }
+      console.log(str);
     });
     console.log('');
   }

@@ -1,5 +1,48 @@
 # Changelog
 
+## [10.0.0] - 2026-03-03
+
+⚠️ This major release contains new, redesigned, and renamed icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
+
+### Added icons
+
+Add bicycle icons. Many thanks to Pinhead's first outside contributor [@dschep](https://github.com/dschep)!
+
+- <img src="https://pinhead.ink/v10/person_riding_bicycle_up_uneven_slope.svg" width="15px"/> Add `person_riding_bicycle_up_uneven_slope` imported by [@dschep](https://github.com/dschep)
+- <img src="https://pinhead.ink/v10/person_riding_bicycle_down_uneven_slope.svg" width="15px"/> Add `person_riding_bicycle_down_uneven_slope` by [@dschep](https://github.com/dschep)
+- <img src="https://pinhead.ink/v10/cargobike.svg" width="15px"/> Add `cargobike` designed by [@dschep](https://github.com/dschep)
+- <img src="https://pinhead.ink/v10/cargobike_on_parking_line.svg" width="15px"/> Add `cargobike_on_parking_line` designed by [@dschep](https://github.com/dschep)
+- <img src="https://pinhead.ink/v10/cargobike_in_parking_structure.svg" width="15px"/> Add `cargobike_in_parking_structure` designed by [@dschep](https://github.com/dschep)
+
+Add various other icons:
+
+- <img src="https://pinhead.ink/v10/flat_head_thumb_tack.svg" width="15px"/> Add `flat_head_thumb_tack` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/flag.svg" width="15px"/> Add `flag`
+- <img src="https://pinhead.ink/v10/flagstick_with_pennant.svg" width="15px"/> Add `flagstick_with_pennant` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/flagstick_with_pennant_in_hole.svg" width="15px"/> Add `flagstick_with_pennant_in_hole` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/flagstick_with_flag.svg" width="15px"/> Add `flagstick_with_flag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/flagstick_with_flag_in_hole.svg" width="15px"/> Add `flagstick_with_flag_in_hole` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/waterfall_into_water.svg" width="15px"/> Add `waterfall_into_water`
+- <img src="https://pinhead.ink/v10/waterfall.svg" width="15px"/> Add `waterfall`
+- <img src="https://pinhead.ink/v10/person_climbing.svg" width="15px"/> Add `person_climbing`
+- <img src="https://pinhead.ink/v10/bus_within_guideway.svg" width="15px"/> Add `bus_within_guideway` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/bus_with_pantograph.svg" width="15px"/> Add `bus_with_pantograph` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/shopping_bag_with_heart.svg" width="15px"/> Add `shopping_bag_with_heart` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/shopping_bag_with_ampersand.svg" width="15px"/> Add `shopping_bag_with_ampersand` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v10/music_notes_eighth.svg" width="15px"/> Add `music_notes_eighth`
+- <img src="https://pinhead.ink/v10/pixel_anchor.svg" width="15px"/> Add `pixel_anchor` by [@quincylvania](https://github.com/quincylvania)
+
+### Redesigned icons
+
+- <img src="https://pinhead.ink/v9/ticket_in_slot.svg" width="15px"/> -> <img src="https://pinhead.ink/v10/ticket_in_slot.svg" width="15px"/> `ticket_in_slot`
+
+### Renamed icons
+
+- <img src="https://pinhead.ink/v10/flagpole_with_flag.svg" width="15px"/> `flag` -> `flagpole_with_flag`
+- <img src="https://pinhead.ink/v10/flagstick_with_pennant_on_square.svg" width="15px"/> `pennant_on_square` -> `flagstick_with_pennant_on_square`
+- <img src="https://pinhead.ink/v10/person_swinging_golf_club_beside_flagstick_with_pennant.svg" width="15px"/> `person_swinging_golf_club_beside_golf_pin` -> `person_swinging_golf_club_beside_flagstick_with_pennant`
+- <img src="https://pinhead.ink/v10/waterfall_with_froth.svg" width="15px"/> `waterfall` -> `waterfall_with_froth`
+
 ## [9.0.0] - 2026-03-01
 
 ⚠️ This major release contains new icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
