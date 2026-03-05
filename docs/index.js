@@ -30,11 +30,21 @@ async function setupPage(pageData) {
   const parser = new DOMParser();
   const icons = pageData.icons;
 
+  const v1Changelog = changelogs.find(item => item.majorVersion === '1');
+  const iconsAddedSinceLaunch = Object.keys(icons).length - v1Changelog.iconChanges.length
+  const daysSinceLaunch = Date.now() / 1000 / 60 / 60 / 24 - new Date(v1Changelog.date).getTime() / 1000 / 60 / 60 / 24
+  const iconsAddedPerDaySinceLaunch = iconsAddedSinceLaunch / daysSinceLaunch;
+
   const releaseDate = publishDates[version] || currentChangelog.date;
 
   document.getElementById('icon-count')
     .replaceChildren(
       new Intl.NumberFormat().format(Object.keys(icons).length)
+    );
+
+  document.getElementById('per-day-icon-count')
+    .replaceChildren(
+      new Intl.NumberFormat(undefined, {maximumFractionDigits: 1}).format(iconsAddedPerDaySinceLaunch)
     );
 
   document.getElementById('sidebar')
