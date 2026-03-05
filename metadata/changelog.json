@@ -7631,17 +7631,20 @@
         "newId": "person_riding_bicycle_up_uneven_slope",
         "src": "https://raw.githubusercontent.com/mapbox/maki/refs/heads/valleyofdawn/icons/mountain-bike-15.svg",
         "importBy": "@dschep",
-        "issue": "9"
+        "issue": "9",
+        "pr": "58"
       },
       {
         "newId": "person_riding_bicycle_down_uneven_slope",
         "by": "@dschep",
         "inspo": "person_riding_bicycle_up_uneven_slope",
-        "issue": "9"
+        "issue": "9",
+        "pr": "58"
       },
       {
         "newId": "cargobike",
-        "by": "@dschep"
+        "by": "@dschep",
+        "pr": "59"
       },
       {
         "newId": "cargobike_on_parking_line",
@@ -7649,7 +7652,8 @@
         "inspo": [
           "cargobike",
           "parking_line"
-        ]
+        ],
+        "pr": "59"
       },
       {
         "newId": "cargobike_in_parking_structure",
@@ -7657,7 +7661,8 @@
         "inspo": [
           "cargobike",
           "parking_structure"
-        ]
+        ],
+        "pr": "59"
       },
       {
         "newId": "flat_head_thumb_tack",
@@ -7787,7 +7792,9 @@
           "house_with_flag",
           "briefcase_with_info_i",
           "https://raw.githubusercontent.com/nationalparkservice/symbol-library/89fe4d74d1017bba51bffab0eb458df084a21f82/src/standalone/visitor-center-black-22.svg"
-        ]
+        ],
+        "pr": "60",
+        "nps": "visitor-center"
       },
       {
         "oldId": "campsite",
