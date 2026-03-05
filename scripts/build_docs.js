@@ -9,10 +9,15 @@ console.log('Building docs for Pinhead v' + version);
 const currentMajorVersion = parseInt(version.split('.')[0]);
 
 for (let i = 1; i <= currentMajorVersion; i+=1) {
-  downloadLegacyIcons(i);
+  const targetDir = 'docs/v' + i;
+  if (!existsSync(targetDir)) {
+    downloadLegacyIcons(i, targetDir);
+  }
 }
 
-function downloadLegacyIcons(majorVersion) {
+function downloadLegacyIcons(majorVersion, targetDir) {
+  ensureEmptyDir(targetDir);
+
   const spec = packageName + "@^" + majorVersion;
   const file = execSync(`npm pack "${spec}" --silent`, { encoding: "utf8" }).trim();
   const folderName = file.replace(/\.tgz$/, "");
@@ -27,8 +32,6 @@ function downloadLegacyIcons(majorVersion) {
   const iconDir = join(folderName, "dist", "icons");
   if (!existsSync(iconDir)) throw new Error(`dist/icons not found in ${folderName}`);
 
-  const targetDir = 'docs/v' + majorVersion;
-  mkdirSync(targetDir, { recursive: true });
   execSync(`cp -r "${iconDir}/." "${targetDir}"`);
 
   if (majorVersion === currentMajorVersion) {
@@ -39,7 +42,7 @@ function downloadLegacyIcons(majorVersion) {
 
   rmSync(folderName, { recursive: true, force: true });
 
-  console.log("Loaded icons from " + folderName);
+  console.log("Downloaded icons from " + folderName);
 }
 
 const importSources = JSON.parse(readFileSync('metadata/external_sources.json'));
@@ -52,14 +55,21 @@ function ensureEmptyDir(dir) {
 }
 
 ensureEmptyDir('tmp');
-ensureEmptyDir('docs/srcicons');
 
 const srciconsIndex = {};
 
 for (const importSource of importSources) {
+  const targetDir = `docs/srcicons/${importSource.id}`;
+  if (!existsSync(targetDir)) {
+    downloadExternalSourceIcons(importSource, targetDir);
+  }
+}
+
+function downloadExternalSourceIcons(importSource, targetDir) {
+  ensureEmptyDir(targetDir);
+
   execSync(`git clone --depth 1 ${importSource.repo} "tmp/${importSource.id}"`)
   const srcDir = join(`tmp/${importSource.id}`, importSource.iconDir);
-  const targetDir = `docs/srcicons/${importSource.id}`;
   execSync(`cp -r "${srcDir}/." "${targetDir}"`);
 
   srciconsIndex[importSource.id] = {};
@@ -75,6 +85,7 @@ for (const importSource of importSources) {
     }
     srciconsIndex[importSource.id][id] = {};
   });
+  console.log("Downloaded icons from source: " + importSource.id);
 }
 
 writeFileSync('docs/srcicons/index.json', JSON.stringify(srciconsIndex));
