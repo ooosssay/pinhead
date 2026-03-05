@@ -7796,6 +7796,18 @@
         "issue": "61"
       },
       {
+        "oldId": "bowling_pins",
+        "newId": "bowling_pins",
+        "by": "@quincylvania",
+        "issue": "52"
+      },
+      {
+        "oldId": "bowling_pin_and_bowling_ball",
+        "newId": "bowling_pin_and_bowling_ball",
+        "by": "@quincylvania",
+        "issue": "52"
+      },
+      {
         "newId": "house_with_flag_and_info_i",
         "by": "@dschep",
         "inspo": [
