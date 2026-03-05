@@ -7909,6 +7909,17 @@
         "issue": "53"
       },
       {
+        "newId": "sitting_tank_toilet",
+        "by": "@quincylvania",
+        "issue": "39"
+      },
+      {
+        "newId": "sitting_tank_toilet_with_droplet",
+        "by": "@quincylvania",
+        "issue": "39",
+        "nps": "flush-toilets"
+      },
+      {
         "newId": "mobile_phone_with_keypad_and_antenna_beside_mobile_phone_with_touchscreen_and_antenna",
         "by": "@quincylvania",
         "inspo": [
