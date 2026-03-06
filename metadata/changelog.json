@@ -7951,6 +7951,21 @@
       {
         "newId": "double_mars",
         "by": "@quincylvania"
+      },
+      {
+        "newId": "pixel_map_pin",
+        "by": "@quincylvania",
+        "inspo": "map_pin"
+      },
+      {
+        "newId": "pixel_map_pin_with_dot",
+        "by": "@quincylvania",
+        "inspo": "map_pin_with_dot"
+      },
+      {
+        "newId": "pixel_bowling_ball",
+        "by": "@quincylvania",
+        "inspo": "bowling_ball"
       }
     ]
   }
