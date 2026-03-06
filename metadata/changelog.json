@@ -8022,6 +8022,11 @@
           "@quincylvania"
         ],
         "issue": "69"
+      },
+      {
+        "newId": "pixel_circle_with_dot",
+        "by": "@quincylvania",
+        "inspo": "circle_with_dot"
       }
     ]
   }
