@@ -1,5 +1,83 @@
 # Changelog
 
+## [11.0.0] - 2026-03-05
+
+⚠️ This major release contains new, redesigned, and renamed icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
+
+### Added icons
+
+Add candlepin bowling icons. Thank you to new Pinhead contributor [@petercooperjr](https://github.com/petercooperjr)!
+
+- <img src="https://pinhead.ink/v11/candlepins.svg" width="15px"/> Add `candlepins` by [@petercooperjr](https://github.com/petercooperjr) ([#61](https://github.com/waysidemapping/pinhead/issues/61))
+- <img src="https://pinhead.ink/v11/candlepin_with_ball.svg" width="15px"/> Add `candlepin_with_ball` by [@petercooperjr](https://github.com/petercooperjr) ([#61](https://github.com/waysidemapping/pinhead/issues/61))
+
+Add other bowling icons:
+
+- <img src="https://pinhead.ink/v11/bowling_pin.svg" width="15px"/> Add `bowling_pin` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/bowling_ball.svg" width="15px"/> Add `bowling_ball` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/pixel_bowling_ball.svg" width="15px"/> Add `pixel_bowling_ball` by [@quincylvania](https://github.com/quincylvania)
+
+Add visitor or information center icon:
+
+- <img src="https://pinhead.ink/v11/house_with_flag_and_info_i.svg" width="15px"/> Add `house_with_flag_and_info_i` by [@dschep](https://github.com/dschep) ([#60](https://github.com/waysidemapping/pinhead/issues/60))
+
+Add euro symbol icons:
+
+- <img src="https://pinhead.ink/v11/euro.svg" width="15px"/> Add `euro` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/car_with_euro.svg" width="15px"/> Add `car_with_euro` by [@quincylvania](https://github.com/quincylvania)
+
+Add campsite icons:
+
+- <img src="https://pinhead.ink/v11/campsite_with_dollar.svg" width="15px"/> Add `campsite_with_dollar` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/campsite_with_euro.svg" width="15px"/> Add `campsite_with_euro` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/campsite_with_canoe.svg" width="15px"/> Add `campsite_with_canoe` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/campsites.svg" width="15px"/> Add `campsites` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v11/campsite_tipi_style.svg" width="15px"/> Add `campsite_tipi_style` by [@quincylvania](https://github.com/quincylvania) ([#52](https://github.com/waysidemapping/pinhead/issues/52))
+- <img src="https://pinhead.ink/v11/campsite_tipi_style_with_dollar.svg" width="15px"/> Add `campsite_tipi_style_with_dollar` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/campsite_tipi_style_with_euro.svg" width="15px"/> Add `campsite_tipi_style_with_euro` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/campsites_tipi_style.svg" width="15px"/> Add `campsites_tipi_style` by [@quincylvania](https://github.com/quincylvania) ([#52](https://github.com/waysidemapping/pinhead/issues/52))
+
+Add tent icons:
+
+- <img src="https://pinhead.ink/v11/a_frame_tent.svg" width="15px"/> Add `a_frame_tent` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v11/a_frame_tents.svg" width="15px"/> Add `a_frame_tents` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v11/a_frame_sidewall_tent.svg" width="15px"/> Add `a_frame_sidewall_tent` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v11/a_frame_sidewall_tents.svg" width="15px"/> Add `a_frame_sidewall_tents` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v11/wall_tent.svg" width="15px"/> Add `wall_tent` by [@quincylvania](https://github.com/quincylvania) ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+
+Add toilet icons:
+
+- <img src="https://pinhead.ink/v11/sitting_tank_toilet.svg" width="15px"/> Add `sitting_tank_toilet` by [@quincylvania](https://github.com/quincylvania) ([#39](https://github.com/waysidemapping/pinhead/issues/39))
+- <img src="https://pinhead.ink/v11/sitting_tank_toilet_with_droplet.svg" width="15px"/> Add `sitting_tank_toilet_with_droplet` by [@quincylvania](https://github.com/quincylvania) ([#39](https://github.com/waysidemapping/pinhead/issues/39))
+
+Add combined phones icon:
+
+- <img src="https://pinhead.ink/v11/mobile_phone_with_keypad_and_antenna_beside_mobile_phone_with_touchscreen_and_antenna.svg" width="15px"/> Add `mobile_phone_with_keypad_and_antenna_beside_mobile_phone_with_touchscreen_and_antenna` by [@quincylvania](https://github.com/quincylvania)
+
+Add gender and sexuality icons:
+
+- <img src="https://pinhead.ink/v11/mars.svg" width="15px"/> Add `mars` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/venus_mars.svg" width="15px"/> Add `venus_mars` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/venus_with_mars.svg" width="15px"/> Add `venus_with_mars` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/double_venus.svg" width="15px"/> Add `double_venus` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/double_mars.svg" width="15px"/> Add `double_mars` by [@quincylvania](https://github.com/quincylvania)
+
+Add pixel icons:
+
+- <img src="https://pinhead.ink/v11/pixel_map_pin.svg" width="15px"/> Add `pixel_map_pin` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v11/pixel_map_pin_with_dot.svg" width="15px"/> Add `pixel_map_pin_with_dot` by [@quincylvania](https://github.com/quincylvania)
+
+### Renamed and redesigned icons
+
+- <img src="https://pinhead.ink/v10/tents.svg" width="15px"/> `tents` -> <img src="https://pinhead.ink/v11/wall_tents.svg" width="15px"/> `wall_tents` ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+
+### Redesigned icons
+
+- <img src="https://pinhead.ink/v10/bowling_pins.svg" width="15px"/> -> <img src="https://pinhead.ink/v11/bowling_pins.svg" width="15px"/> `bowling_pins` ([#52](https://github.com/waysidemapping/pinhead/issues/52))
+- <img src="https://pinhead.ink/v10/bowling_pin_and_bowling_ball.svg" width="15px"/> -> <img src="https://pinhead.ink/v11/bowling_pin_and_bowling_ball.svg" width="15px"/> `bowling_pin_and_bowling_ball` ([#52](https://github.com/waysidemapping/pinhead/issues/52))
+- <img src="https://pinhead.ink/v10/campsite.svg" width="15px"/> -> <img src="https://pinhead.ink/v11/campsite.svg" width="15px"/> `campsite` ([#53](https://github.com/waysidemapping/pinhead/issues/53))
+- <img src="https://pinhead.ink/v10/venus.svg" width="15px"/> -> <img src="https://pinhead.ink/v11/venus.svg" width="15px"/> `venus`
+
 ## [10.0.0] - 2026-03-03
 
 ⚠️ This major release contains new, redesigned, and renamed icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
