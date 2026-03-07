@@ -7982,6 +7982,16 @@
         "newId": "target",
         "by": "@quincylvania",
         "inspo": "target_with_archery_arrow_at_bullseye"
+      },
+      {
+        "newId": "info_i_terminal",
+        "by": "@dschep",
+        "inspo": [
+          "app_terminal",
+          "briefcase_with_info_i",
+          "https://raw.githubusercontent.com/openstreetmap-carto/openstreetmap-carto/40820143374b5550fb294cfc754db8ca662094b0/symbols/tourism/terminal.svg"
+        ],
+        "osmcarto": "tourism/terminal"
       }
     ]
   }
