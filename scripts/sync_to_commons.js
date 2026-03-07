@@ -99,23 +99,24 @@ async function downloadCategoryPages() {
       const results = content && /{{Pinhead\|(.+?)(?:\|v=(\d+?))}}/.exec(content);
 
       if (results && results.length >= 3) {
-        const iconId = results[1];
+        const pinheadIconId = results[1];
         const commonsIconV = parseInt(results[2]);
 
-        const iconInfo = iconsById[iconId];
+        const iconInfo = iconsById[pinheadIconId];
         if (!iconInfo) {
           console.error(`Cannot find icon info for ${title}`);
         } else {
-          const latestV = parseInt(iconsById[iconId].v);
+          const latestV = parseInt(iconsById[pinheadIconId].v);
           if (commonsIconV < latestV) {
              console.error(`Commons icon needs to be updated: ${title}`);
           } else {
             validRemotePages[page.pageid] = {
+              pinheadIconId: pinheadIconId,
               filename: page.title.slice(5)
             };
           }
-          if (iconsToUpload[iconId]) {
-            delete iconsToUpload[iconId];
+          if (iconsToUpload[pinheadIconId]) {
+            delete iconsToUpload[pinheadIconId];
           }
         }
       } else {
@@ -129,8 +130,8 @@ async function downloadCategoryPages() {
   console.log('Done downloading');
 }
 
-async function uploadFile(iconId, srcdir, svg, cookie, token) {
-  const icon = iconsById[iconId];
+async function uploadFile(pinheadIconId, srcdir, svg, cookie, token) {
+  const icon = iconsById[pinheadIconId];
   
   let bys = (icon.by || []).concat(icon.srcBy || []);
   let bylines = bys
@@ -192,7 +193,7 @@ async function uploadFile(iconId, srcdir, svg, cookie, token) {
   
   const categoriesString = categories.map(cat => `[[Category:${cat}]]\n`).join('');
 
-  const filename = `${iconId} Pinhead icon.svg`
+  const filename = `${pinheadIconId} Pinhead icon.svg`
 
   const form = new FormData();
   form.append("action", "upload");
@@ -201,16 +202,16 @@ async function uploadFile(iconId, srcdir, svg, cookie, token) {
 
   form.append("text", `=={{int:filedesc}}==
 {{Information
-|description    = {{en|1=Plain black vector icon depicting "${iconId.replaceAll('_', ' ')}". Intended for display at 15x15 pixels or greater. Part of the [https://pinhead.ink Pinhead] map icon library.}}
+|description    = {{en|1=Plain black vector icon depicting "${pinheadIconId.replaceAll('_', ' ')}". Intended for display at 15x15 pixels or greater. Part of the [https://pinhead.ink Pinhead] map icon library.}}
 |date           = ${icon.date}
-|source         = https://github.com/waysidemapping/pinhead/blob/v${currentMajorVersion}.0.0/icons/${(srcdir ? srcdir + '/' : '') + iconId}.svg
+|source         = https://github.com/waysidemapping/pinhead/blob/v${currentMajorVersion}.0.0/icons/${(srcdir ? srcdir + '/' : '') + pinheadIconId}.svg
 |author         = ${bylines.join(', ')}
 |permission     = 
 |other versions = 
 }}
 
 =={{int:license-header}}==
-{{Pinhead|${iconId}|v=${icon.v}}}
+{{Pinhead|${pinheadIconId}|v=${icon.v}}}
 {{Cc-zero}}
 
 ${categoriesString}`);
@@ -291,34 +292,51 @@ async function uploadEntityStatements(loginInfo) {
     P462: 'Q23445',         // color              = black
   };
 
+  const yearRegex = /^\d{4}-\d{2}-\d{2}$/;
+
   function claimsForProps(props) {
     const claims = [];
     for (const prop in props) {
-      const claim = {
-        mainsnak: {
-          snaktype: "value",
-          property: prop,
-          datavalue: {}
-        },
-        type: "statement",
-        rank: "normal"
-      }
-      const val = props[prop];
-      if (val.slice(0, 1) === 'Q') {
-        claim.mainsnak.datavalue = {
-          value: {
-            "entity-type": "item",
-            "numeric-id": parseInt(val.slice(1))
+      const vals = Array.isArray(props[prop]) ? props[prop] : [props[prop]];
+      for (const val of vals) {
+        const claim = {
+          mainsnak: {
+            snaktype: "value",
+            property: prop,
+            datavalue: {}
           },
-          type: "wikibase-entityid"
-        };
-      } else {
-        claim.mainsnak.datavalue = {
-          value: val,
-          type: "string"
-        };
-      }
-      claims.push(claim);
+          type: "statement",
+          rank: "normal"
+        }
+        
+        if (yearRegex.test(val)) {
+          claim.mainsnak.datavalue = {
+            value: {
+              "time": `+${val}T00:00:00Z`,
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            type: "time"
+          };
+        } else if (val.slice(0, 1) === 'Q') {
+          claim.mainsnak.datavalue = {
+            value: {
+              "entity-type": "item",
+              "numeric-id": parseInt(val.slice(1))
+            },
+            type: "wikibase-entityid"
+          };
+        } else {
+          claim.mainsnak.datavalue = {
+            value: val,
+            type: "string"
+          };
+        }
+        claims.push(claim);
+      } 
     }
     return claims;
   }
@@ -330,13 +348,25 @@ async function uploadEntityStatements(loginInfo) {
       return;
     }
     const propsToUpload = Object.assign({}, defaultProps);
+    const pinheadIconInfo = iconsById[remotePage.pinheadIconId];
+    if (!pinheadIconInfo) {
+      console.error('Missing Pinhead icon info for ' + remotePage.filename);
+      return;
+    }
+
+    // inception = date
+    propsToUpload.P571 = pinheadIconInfo.ogDate;
+
+    // This is commented out since the unicode character property is not yet recommended for Commons files
+    // if (pinheadIconInfo.char) {
+    //   propsToUpload.P487 = pinheadIconInfo.char;
+    // }
     for (const prop in remotePage.statements) {
       if (propsToUpload[prop]) delete propsToUpload[prop];
     }
     if (Object.keys(propsToUpload).length) {
-      console.log('Uploading props for ' + remotePage.filename + ': ' + Object.keys(propsToUpload));
-      
       const claims = claimsForProps(propsToUpload);
+      console.log('Uploading props for ' + remotePage.filename + ': ' + claims.map(claim => claim.mainsnak.property));
       const params = new URLSearchParams({
         action: "wbeditentity",
         id: 'M' + id,
@@ -356,7 +386,11 @@ async function uploadEntityStatements(loginInfo) {
         body: params
       });
       const data = await res.json();
-      console.log('success: ' + data.success);
+      if (data.success !== 1) {
+        console.log(data);
+      } else {
+        console.log('success: ' + data.success);
+      }
     }
   }
   console.log('Done uploading');
