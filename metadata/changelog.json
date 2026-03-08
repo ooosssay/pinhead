@@ -8672,5 +8672,16 @@
         "viglino": "pirate/svg/pirate-ile"
       }
     ]
+  },
+  {
+    "majorVersion": "14",
+    "date": "2026-03-08",
+    "iconChanges": [
+      {
+        "newId": "turtle_shell_top",
+        "by": "@quincylvania",
+        "inspo": "turtle_top"
+      }
+    ]
   }
 ]
