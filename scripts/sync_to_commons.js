@@ -14,6 +14,8 @@ const currentVersion = JSON.parse(readFileSync('package.json')).version;
 const versionParts = currentVersion.split('.');
 const currentMajorVersion = versionParts[0];
 
+const userAgent ="PinheadBot/1.0 (quincy@waysidemapping.org)";
+
 if (versionParts[1] !== '0' || versionParts[2] !== '0' ||
   currentVersion.includes('dev') ||
   Object.values(iconsById).some(icon => parseInt(icon.v) > parseInt(currentVersion))) {
@@ -31,8 +33,11 @@ const iconsToUpload = JSON.parse(readFileSync('dist/icons/index.complete.json'))
 const validRemotePages = {};
 
 async function login() {
-  const tokenRes = await fetch(
-    `${commonsApiBase}?action=query&meta=tokens&type=login&format=json`
+  const tokenRes = await fetch(`${commonsApiBase}?action=query&meta=tokens&type=login&format=json`, {
+      headers: {
+        "User-Agent": userAgent
+      }
+    }
   );
 
   const tokenData = await tokenRes.json();
@@ -51,7 +56,10 @@ async function login() {
   const loginRes = await fetch(commonsApiBase, {
     method: "POST",
     body: loginParams,
-    headers: { cookie }
+    headers: {
+      "Cookie": cookie, 
+      "User-Agent": userAgent
+    }
   });
 
   const loginData = await loginRes.json();
@@ -59,9 +67,12 @@ async function login() {
 
   cookie = loginRes.headers.get("set-cookie") || cookie;
 
-  const csrfRes = await fetch(
-    `${commonsApiBase}?action=query&meta=tokens&type=csrf&format=json`,
-    { headers: { cookie: cookie } }
+  const csrfRes = await fetch(`${commonsApiBase}?action=query&meta=tokens&type=csrf&format=json`, {
+      headers: {
+        Cookie: cookie,
+        "User-Agent": userAgent
+      }
+    }
   );
   const csrfData = await csrfRes.json();
   const token = csrfData.query.tokens.csrftoken;
@@ -90,7 +101,11 @@ async function downloadCategoryPages() {
 
     if (cont) params.set("gcmcontinue", cont);
 
-    const res = await fetch(`${commonsApiBase}?${params}`);
+    const res = await fetch(`${commonsApiBase}?${params}`, {
+      headers: {
+        "User-Agent": userAgent
+      }
+    });
     const data = await res.json();
     const pages = Object.values(data.query?.pages || {});
     for (const page of pages) {
@@ -155,7 +170,7 @@ async function uploadFile(pinheadIconId, srcdir, svg, cookie, token) {
 
   const catsForDir = {
     aircraft: ['Plain black SVG aircraft icons'],
-    animals: ['Black SVG animal icons'],
+    animals: ['Plain black SVG animal icons'],
     arrows: ['Black SVG arrow icons'],
     bicycles: ['Plain black SVG bicycle icons'],
     briefcases: ['Briefcase icons'],
@@ -224,7 +239,10 @@ ${categoriesString}`);
   const res = await fetch(commonsApiBase, {
     method: "POST",
     body: form,
-    headers: { Cookie: cookie }
+    headers: {
+      Cookie: cookie,
+      "User-Agent": userAgent
+    }
   });
   const json = await res.json();
   if (json.upload?.result === 'Success') {
@@ -252,17 +270,28 @@ async function uploadMissingIcons(loginInfo) {
 async function downloadEntityStatements() {
   console.log('Downloading entity statements...');
 
-  let idsToGet = Object.keys(validRemotePages).map(id => 'M' + id);
+  const idsToGet = Object.keys(validRemotePages).map(pageid => 'M' + pageid);
 
   const maxIdsPerQuery = 50;
   while (idsToGet.length) {
-    const batchIds = idsToGet.slice(0, maxIdsPerQuery);
-    idsToGet = idsToGet.slice(maxIdsPerQuery);
-
-    const batchInfos = await getMediaInfo(batchIds);
-    for (const id in batchInfos.entities) {
-      const item = batchInfos.entities[id]
-      validRemotePages[item.pageid].statements = item.statements;
+    const batchIds = idsToGet.splice(0, maxIdsPerQuery);
+    const batchInfo = await getMediaInfo(batchIds);
+    if (batchInfo.entities && Object.keys(batchInfo.entities).length) {
+      for (const mid in batchInfo.entities) {
+        const item = batchInfo.entities[mid];
+        const pageid = mid.slice(1);
+        const page = validRemotePages[pageid];
+        if (!page) {
+          console.error('Cannot find page for: ' + pageid);
+          console.log(item);
+          console.error('Continuing anyway...');
+        }
+        // statements will be undefined if none have been added yet
+        page.statements = item.statements || [];
+      }
+    } else {
+      console.error('Could not get entities for: ' + batchIds);
+      console.error('Continuing anyway...');
     }
   }
 
@@ -273,7 +302,11 @@ async function downloadEntityStatements() {
       format: "json"
     });
 
-    const res = await fetch(`${commonsApiBase}?${params}`);
+    const res = await fetch(`${commonsApiBase}?${params}`, {
+      headers: {
+        "User-Agent": userAgent
+      }
+    });
     return res.json();
   }
   console.log('Done downloading');
@@ -281,6 +314,8 @@ async function downloadEntityStatements() {
 
 async function uploadEntityStatements(loginInfo) {
   console.log('Uploading entity statements...');
+
+  const yearRegex = /^\d{4}-\d{2}-\d{2}$/;
 
   const defaultProps = {
     P31: 'Q52827',          // instance of        = pictogram
@@ -291,8 +326,51 @@ async function uploadEntityStatements(loginInfo) {
     P6216: 'Q88088423',     // copyright status   = copyrighted, dedicated to the public domain by copyright holder
     P462: 'Q23445',         // color              = black
   };
+  const dependentPropsBySupportingProp = {
+    // only add copyright license if we're also adding copyright status
+    P6216: 'P275'
+  };
+  
+  for (const pageid in validRemotePages) {
+    const remotePage = validRemotePages[pageid];
+    if (!remotePage.statements) {
+      console.error('Missing statements for ' + remotePage.filename);
+      return;
+    }
+    const propsToUpload = Object.assign({}, defaultProps);
+    const pinheadIconInfo = iconsById[remotePage.pinheadIconId];
+    if (!pinheadIconInfo) {
+      console.error('Missing Pinhead icon info for ' + remotePage.filename);
+      return;
+    }
 
-  const yearRegex = /^\d{4}-\d{2}-\d{2}$/;
+    // inception = date
+    propsToUpload.P571 = pinheadIconInfo.ogDate;
+
+    // This is commented out since the unicode character property is not yet recommended for Commons files
+    // if (pinheadIconInfo.char) {
+    //   propsToUpload.P487 = pinheadIconInfo.char;
+    // }
+    for (const prop in remotePage.statements) {
+      if (propsToUpload[prop]) {
+        delete propsToUpload[prop];
+        if (dependentPropsBySupportingProp[prop] && propsToUpload[dependentPropsBySupportingProp[prop]]) {
+          delete propsToUpload[dependentPropsBySupportingProp[prop]];
+        }
+      }
+    }
+    if (Object.keys(propsToUpload).length) {
+      const claims = claimsForProps(propsToUpload);
+      console.log('Uploading props for ' + remotePage.filename + ': ' + claims.map(claim => claim.mainsnak.property));
+      const data = await uploadClaims(pageid, claims);
+      if (data.success !== 1) {
+        console.log(data);
+      } else {
+        console.log('success: ' + data.success);
+      }
+    }
+  }
+  console.log('Done uploading');
 
   function claimsForProps(props) {
     const claims = [];
@@ -340,60 +418,29 @@ async function uploadEntityStatements(loginInfo) {
     }
     return claims;
   }
-  
-  for (const id in validRemotePages) {
-    const remotePage = validRemotePages[id];
-    if (!remotePage.statements) {
-      console.error('Missing statements for ' + remotePage.filename);
-      return;
-    }
-    const propsToUpload = Object.assign({}, defaultProps);
-    const pinheadIconInfo = iconsById[remotePage.pinheadIconId];
-    if (!pinheadIconInfo) {
-      console.error('Missing Pinhead icon info for ' + remotePage.filename);
-      return;
-    }
 
-    // inception = date
-    propsToUpload.P571 = pinheadIconInfo.ogDate;
+  async function uploadClaims(pageid, claims) {
+    const params = new URLSearchParams({
+      action: "wbeditentity",
+      id: 'M' + pageid,
+      data: JSON.stringify({
+        claims: claims
+      }),
+      token: loginInfo.token,
+      format: "json"
+    });
 
-    // This is commented out since the unicode character property is not yet recommended for Commons files
-    // if (pinheadIconInfo.char) {
-    //   propsToUpload.P487 = pinheadIconInfo.char;
-    // }
-    for (const prop in remotePage.statements) {
-      if (propsToUpload[prop]) delete propsToUpload[prop];
-    }
-    if (Object.keys(propsToUpload).length) {
-      const claims = claimsForProps(propsToUpload);
-      console.log('Uploading props for ' + remotePage.filename + ': ' + claims.map(claim => claim.mainsnak.property));
-      const params = new URLSearchParams({
-        action: "wbeditentity",
-        id: 'M' + id,
-        data: JSON.stringify({
-          claims: claims
-        }),
-        token: loginInfo.token,
-        format: "json"
-      });
-
-      const res = await fetch(commonsApiBase, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Cookie": loginInfo.cookie
-        },
-        body: params
-      });
-      const data = await res.json();
-      if (data.success !== 1) {
-        console.log(data);
-      } else {
-        console.log('success: ' + data.success);
-      }
-    }
+    const res = await fetch(commonsApiBase, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": loginInfo.cookie,
+        "User-Agent": userAgent
+      },
+      body: params
+    });
+    return await res.json();
   }
-  console.log('Done uploading');
 }
 
 const loginInfo = await login();
