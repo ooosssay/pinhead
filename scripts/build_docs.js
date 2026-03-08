@@ -67,7 +67,7 @@ function downloadExternalSourceIcons(importSource, targetDir) {
   ensureEmptyDir(targetDir);
 
   execSync(`git clone --depth 1 ${importSource.repo} "tmp/${importSource.id}"`)
-  const srcDir = join(`tmp/${importSource.id}`, importSource.iconDir);
+  const srcDir = join(`tmp/${importSource.id}`, importSource.iconDir || "");
   execSync(`cp -r "${srcDir}/." "${targetDir}"`);
 
   const srciconsIndex = {};

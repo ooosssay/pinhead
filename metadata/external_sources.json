@@ -39,5 +39,11 @@
     "name": "Temaki",
     "repo": "https://github.com/rapideditor/temaki.git",
     "iconDir": "icons"
+  },
+  {
+    "id": "viglino",
+    "name": "Viglino",
+    "repo": "https://github.com/Viglino/map-font-symbols.git",
+    "ignoreFiles": "^(?!.*(princesse\/svg\/|pirate\/svg\/)).*|.*\/old\/.*$"
   }
 ]

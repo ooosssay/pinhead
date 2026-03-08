@@ -124,7 +124,7 @@ function validateChangelog() {
               return;
             }
             const filename = id + (importSource.filenameSuffix || '') + '.svg';
-            const iconFile = join(repoPath(importSource.repo), importSource.iconDir, filename);
+            const iconFile = join(repoPath(importSource.repo), importSource.iconDir || "", filename);
             
             if (!existsSync(iconFile)) {
               console.error(`No such icon "${iconFile}" referenced by "${iconChange.newId}" in version ${v}`);
@@ -227,8 +227,9 @@ function printTextForChangelog(changelog) {
     console.log('');
     addedIcons.forEach(iconChange => {
       let str = `- <img src="https://pinhead.ink/v${newV}/${iconChange.newId}.svg" width="15px"/> Add \`${iconChange.newId}\``;
-      if (iconChange.by) {
-        str += ' by ' + stringArray(iconChange.by).map(by => `[${by}](https://github.com/${by.slice(1)})`).join(', ');
+      if (iconChange.by || iconChange.srcBy) {
+        const bys = (iconChange.by ? stringArray(iconChange.by) : []).concat(iconChange.srcBy ? stringArray(iconChange.srcBy) : []);
+        str += ' by ' + bys.map(by => `[${by}](https://github.com/${by.slice(1)})`).join(', ');
       }
       console.log(str + issueLinks(iconChange));
     });
