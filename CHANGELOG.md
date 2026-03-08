@@ -2,7 +2,7 @@
 
 ## [13.0.0] - 2026-03-07
 
-⚠️ This major release contains new, renamed, and redesigned icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
+⚠️ This major release contains new and renamed icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
 
 ### Renamed icons
 
