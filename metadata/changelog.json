@@ -8775,6 +8775,24 @@
         "inspo": "kids_train_on_railway_track"
       },
       {
+        "newId": "car_beside_car",
+        "by": "@quincylvania",
+        "inspo": "car_with_dollar"
+      },
+      {
+        "newId": "car_beside_car_under_car_beside_car",
+        "by": "@quincylvania",
+        "inspo": "car_with_dollar"
+      },
+      {
+        "newId": "car_under_toll_gantry",
+        "by": "@quincylvania",
+        "inspo": [
+          "car_with_dollar",
+          "toll_gantry"
+        ]
+      },
+      {
         "newId": "tag",
         "by": "@quincylvania"
       },
