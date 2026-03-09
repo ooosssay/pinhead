@@ -1,5 +1,84 @@
 # Changelog
 
+## [14.0.0] - 2026-03-08
+
+### Added icons
+
+Add dog icons:
+
+- <img src="https://pinhead.ink/v14/dog.svg" width="15px"/> Add `dog` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/dog_wearing_collar_on_leash.svg" width="15px"/> Add `dog_wearing_collar_on_leash` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/dog_wearing_harness.svg" width="15px"/> Add `dog_wearing_harness` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/dog_wearing_harness_on_leash.svg" width="15px"/> Add `dog_wearing_harness_on_leash` by [@quincylvania](https://github.com/quincylvania)
+
+Import icons from OpenStreetMap Carto and NPS:
+
+- <img src="https://pinhead.ink/v14/cupcake_with_cherry.svg" width="15px"/> Add `cupcake_with_cherry`
+- <img src="https://pinhead.ink/v14/milk_carton_and_cheese.svg" width="15px"/> Add `milk_carton_and_cheese`
+- <img src="https://pinhead.ink/v14/rays_outward.svg" width="15px"/> Add `rays_outward`
+- <img src="https://pinhead.ink/v14/dot_with_rays_right.svg" width="15px"/> Add `dot_with_rays_right`
+
+Add train icon variants:
+
+- <img src="https://pinhead.ink/v14/bullet_train.svg" width="15px"/> Add `bullet_train` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/diesel_train.svg" width="15px"/> Add `diesel_train` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/steam_train.svg" width="15px"/> Add `steam_train` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/steam_train_with_tires.svg" width="15px"/> Add `steam_train_with_tires` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/kids_train.svg" width="15px"/> Add `kids_train` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/kids_train_with_tires.svg" width="15px"/> Add `kids_train_with_tires` by [@quincylvania](https://github.com/quincylvania)
+
+Add car icons:
+
+- <img src="https://pinhead.ink/v14/car_beside_car.svg" width="15px"/> Add `car_beside_car` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/car_beside_car_under_car_beside_car.svg" width="15px"/> Add `car_beside_car_under_car_beside_car` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/car_under_toll_gantry.svg" width="15px"/> Add `car_under_toll_gantry` by [@quincylvania](https://github.com/quincylvania)
+
+Add tag icons:
+
+- <img src="https://pinhead.ink/v14/tag.svg" width="15px"/> Add `tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/car_and_tag.svg" width="15px"/> Add `car_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/sedan_and_tag.svg" width="15px"/> Add `sedan_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/station_wagon_and_tag.svg" width="15px"/> Add `station_wagon_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/pickup_truck_and_tag.svg" width="15px"/> Add `pickup_truck_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/bicycle_and_tag.svg" width="15px"/> Add `bicycle_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/motorcycle_and_tag.svg" width="15px"/> Add `motorcycle_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/cargobike_and_tag.svg" width="15px"/> Add `cargobike_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/motorboat_and_tag.svg" width="15px"/> Add `motorboat_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/vneck_tshirt_and_tag.svg" width="15px"/> Add `vneck_tshirt_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/giftwrapped_box_and_tag.svg" width="15px"/> Add `giftwrapped_box_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/file_box_and_tag.svg" width="15px"/> Add `file_box_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/shopping_bag_and_tag.svg" width="15px"/> Add `shopping_bag_and_tag` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/shopping_bag_with_tag.svg" width="15px"/> Add `shopping_bag_with_tag` by [@quincylvania](https://github.com/quincylvania)
+
+Add arrow icons:
+
+- <img src="https://pinhead.ink/v14/arrow_left.svg" width="15px"/> Add `arrow_left` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_up.svg" width="15px"/> Add `arrow_up` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_down.svg" width="15px"/> Add `arrow_down` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_bottom_left.svg" width="15px"/> Add `arrow_bottom_left` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_bottom_right.svg" width="15px"/> Add `arrow_bottom_right` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_top_left.svg" width="15px"/> Add `arrow_top_left` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_top_right.svg" width="15px"/> Add `arrow_top_right` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_down_from_up_bracket.svg" width="15px"/> Add `arrow_down_from_up_bracket` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_right_from_left_bracket.svg" width="15px"/> Add `arrow_right_from_left_bracket` by [@quincylvania](https://github.com/quincylvania)
+- <img src="https://pinhead.ink/v14/arrow_left_from_right_bracket.svg" width="15px"/> Add `arrow_left_from_right_bracket` by [@quincylvania](https://github.com/quincylvania)
+
+Add variant icon:
+
+- <img src="https://pinhead.ink/v14/turtle_shell_top.svg" width="15px"/> Add `turtle_shell_top` by [@quincylvania](https://github.com/quincylvania)
+
+Add pixel icon:
+
+- <img src="https://pinhead.ink/v14/pixel_skull.svg" width="15px"/> Add `pixel_skull` by [@quincylvania](https://github.com/quincylvania)
+
+### Redesigned icons
+
+- <img src="https://pinhead.ink/v13/dog_wearing_collar.svg" width="15px"/> -> <img src="https://pinhead.ink/v14/dog_wearing_collar.svg" width="15px"/> `dog_wearing_collar`
+- <img src="https://pinhead.ink/v13/comb_and_dog_wearing_collar.svg" width="15px"/> -> <img src="https://pinhead.ink/v14/comb_and_dog_wearing_collar.svg" width="15px"/> `comb_and_dog_wearing_collar`
+- <img src="https://pinhead.ink/v13/dog_wearing_collar_in_shelter.svg" width="15px"/> -> <img src="https://pinhead.ink/v14/dog_wearing_collar_in_shelter.svg" width="15px"/> `dog_wearing_collar_in_shelter`
+- <img src="https://pinhead.ink/v13/mounted_slotted_dispenser_with_dog_wearing_collar.svg" width="15px"/> -> <img src="https://pinhead.ink/v14/mounted_slotted_dispenser_with_dog_wearing_collar.svg" width="15px"/> `mounted_slotted_dispenser_with_dog_wearing_collar`
+- <img src="https://pinhead.ink/v13/file_box.svg" width="15px"/> -> <img src="https://pinhead.ink/v14/file_box.svg" width="15px"/> `file_box`
+
 ## [13.0.0] - 2026-03-07
 
 ⚠️ This major release contains new and renamed icons that may affect your setup. A machine-readable version of this changelog can be found in the [`changelog.json`](/metadata/changelog.json) file.
