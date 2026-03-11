@@ -380,8 +380,8 @@ async function uploadNewIconVersions() {
             "User-Agent": userAgent
           }
         });
-        const result = await res.json();
-        console.log(result.edit?.result);
+        const result2 = await res.json();
+        console.log(result2.edit?.result);
       } else {
         console.error(result);
       }
