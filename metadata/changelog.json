@@ -9542,6 +9542,46 @@
         "oldId": "jp_school",
         "newId": "jp_college",
         "edit": "merge"
+      },
+      {
+        "newId": "us_illinois",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_illinois_with_capital",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_new_jersey",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_new_jersey_with_capital",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_massachusetts",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_massachusetts_with_capital",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_texas",
+        "by": "@quincylvania",
+        "issue": "114"
+      },
+      {
+        "newId": "us_texas_with_capital",
+        "by": "@quincylvania",
+        "issue": "114"
       }
     ]
   }
