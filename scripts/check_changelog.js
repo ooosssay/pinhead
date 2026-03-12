@@ -147,7 +147,7 @@ function validateChangelog() {
         }
       }
       if (iconChange.newId && iconChange.newId !== iconChange.oldId) {
-        if (iconsById[iconChange.newId]) {
+        if (iconsById[iconChange.newId] && iconChange.edit !== 'merge') {
           console.error(`Duplicate changelog entry for icon "${iconChange.newId}" in version ${v}`)
           return;
         }
@@ -197,7 +197,7 @@ function printTextForChangelog(changelog) {
   console.log(`## [${version}] - ${changelog.date}`);
   console.log('');
   const oldV = parseInt(newV) - 1;
-  const addedIcons = [], deletedIcons = [], renamedIcons = [], redesignedIcons = [], renamedAndRedesignedIcons = [];
+  const addedIcons = [], deletedIcons = [], renamedIcons = [], mergedIcons = [], redesignedIcons = [], renamedAndRedesignedIcons = [];
   changelog.iconChanges.forEach(iconChange => {
     if (iconChange.oldId) {
       if (iconChange.newId) {
@@ -205,6 +205,8 @@ function printTextForChangelog(changelog) {
           redesignedIcons.push(iconChange);
         } else if (iconChange.by || iconChange.src) {
           renamedAndRedesignedIcons.push(iconChange);
+        } else if (iconChange.edit === 'merge'){
+          mergedIcons.push(iconChange);
         } else {
           renamedIcons.push(iconChange);
         }
@@ -236,6 +238,14 @@ function printTextForChangelog(changelog) {
     console.log('');
     renamedIcons.forEach(iconChange => {
       console.log(`- <img src="https://pinhead.ink/v${newV}/${iconChange.newId}.svg" width="15px"/> \`${iconChange.oldId}\` -> \`${iconChange.newId}\`` + issueLinks(iconChange));
+    });
+    console.log('');
+  }
+  if (mergedIcons.length) {
+    console.log('### Merged icons');
+    console.log('');
+    mergedIcons.forEach(iconChange => {
+      console.log(`- <img src="https://pinhead.ink/v${oldV}/${iconChange.oldId}.svg" width="15px"/> \`${iconChange.oldId}\` -> <img src="https://pinhead.ink/v${newV}/${iconChange.newId}.svg" width="15px"/> \`${iconChange.newId}\`` + issueLinks(iconChange));
     });
     console.log('');
   }

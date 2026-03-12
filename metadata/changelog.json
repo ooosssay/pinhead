@@ -9533,5 +9533,16 @@
         "issue": "107"
       }
     ]
+  },
+  {
+    "majorVersion": "16",
+    "date": "2026-03-12",
+    "iconChanges": [
+      {
+        "oldId": "jp_school",
+        "newId": "jp_college",
+        "edit": "merge"
+      }
+    ]
   }
 ]
