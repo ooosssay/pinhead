@@ -26,7 +26,7 @@ async function setupPage(pageData) {
 
   const currentChangelog = changelogs.find(item => item.majorVersion === majorVersion);
   const newIconIds = currentChangelog.iconChanges
-    .filter(iconChange => iconChange.newId && (!iconChange.oldId || (iconChange.by && iconChange.edit !== "flip")))
+    .filter(iconChange => iconChange.newId && (!iconChange.oldId || (iconChange.by && !["flip", "resize"].includes(iconChange.edit))))
     .map(iconChange => iconChange.newId);
 
   const parser = new DOMParser();
