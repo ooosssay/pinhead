@@ -242,6 +242,7 @@ function commonsPageCategoriesText(pinheadIconId) {
     towers_poles_masts: ['Tower icons'],
     trains: ['Plain black SVG train icons'],
     trucks: ['Plain black SVG truck icons'],
+    us: ['Plain black SVG icon maps of the United States'],
     watercraft: ['Plain black SVG watercraft icons'],
     water_pipes: ['Plumbing icons'],
   };
