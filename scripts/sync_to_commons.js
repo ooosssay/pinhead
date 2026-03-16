@@ -208,48 +208,49 @@ function commonsPageCategoriesText(pinheadIconId) {
   if (bys.includes('@quincylvania')) {
     categories.push('Pinhead icons by Quincy Morgan');
   }
-
-  const srcdir = completeIconsById[pinheadIconId].srcdir;
-  const dirs = srcdir ? srcdir.split('/') : [];
-
   const catsForDir = {
-    aircraft: ['Plain black SVG aircraft icons'],
+    'abstract_symbols/arrows': ['Black SVG arrow icons'],
+    'abstract_symbols/currency_symbols': ['Currency icons'],
+    'abstract_symbols/electrical_diagram_symbols': ['SVG electrical symbols'],
+    'abstract_symbols/hearts': ['Plain black SVG heart icons'],
+    'abstract_symbols/japanese_map_symbols': ['SVG map symbols of Japan'],
     animals: ['Plain black SVG animal icons'],
-    arrows: ['Black SVG arrow icons'],
-    bicycles: ['Plain black SVG bicycle icons'],
-    body_and_medicine: ['Plain black SVG medical icons'],
+    body_parts: ['Plain black SVG medical icons'],
+    'boundaries/us': ['Plain black SVG icon maps of the United States'],
     briefcases: ['Briefcase icons'],
+    'abstract_symbols/campsite_symbols': ['Plain black SVG tent icons'],
+    'buildings/castles': ['Plain black SVG castle icons'],
+    'buildings/tents': ['Plain black SVG tent icons'],
     buildings: ['Plain black SVG building icons'],
-    buses: ['Plain black SVG bus icons'],
-    campsite_symbols: ['Tent icons'],
-    cars: ['Plain black SVG automobile icons'],
-    currency_symbols: ['Currency icons'],
-    electrical_diagram_symbols: ['SVG electrical symbols'],
     food_and_drink: ['Plain black SVG food and drink icons'],
     hand_tools: ['Plain black SVG tool icons'],
-    hearts: ['Plain black SVG heart icons'],
-    japanese_map_symbols: ['SVG map symbols of Japan'],
     landforms: ['SVG nature icons'],
     manhole_covers: ['Manhole covers'],
+    medical_devices_and_medicine: ['Plain black SVG medical icons'],
+    microbiology: ['Plain black SVG medical icons'],
     mobile_phones: ['Plain black SVG telephone icons'],
-    motorcycles: ['Plain black SVG motorcycle icons'],
     people: ['Plain black SVG people icons'],
     phones: ['Plain black SVG telephone icons'],
     pixel_style: ['One-color SVG pixel art (black)'],
     plants: ['Plain black SVG plant icons'],
     religious: ['Plain black SVG religious computer icons'],
-    tents: ['Tent icons'],
     towers_poles_masts: ['Tower icons'],
-    trains: ['Plain black SVG train icons'],
-    trucks: ['Plain black SVG truck icons'],
-    us: ['Plain black SVG icon maps of the United States'],
-    watercraft: ['Plain black SVG watercraft icons'],
+    'vehicles/aircraft': ['Plain black SVG aircraft icons'],
+    'vehicles/bicycles': ['Plain black SVG bicycle icons'],
+    'vehicles/buses': ['Plain black SVG bus icons'],
+    'vehicles/cars': ['Plain black SVG automobile icons'],
+    'vehicles/motorcycles': ['Plain black SVG motorcycle icons'],
+    'vehicles/trains': ['Plain black SVG train icons'],
+    'vehicles/trucks': ['Plain black SVG truck icons'],
+    'vehicles/watercraft': ['Plain black SVG watercraft icons'],
     water_pipes: ['Plumbing icons'],
   };
 
-  for (const dir in catsForDir) {
-    if (dirs.includes(dir)) {
-      categories = categories.concat(catsForDir[dir]);
+  const srcdir = completeIconsById[pinheadIconId].srcdir;
+  for (const dirPrefix in catsForDir) {
+    if (srcdir.startsWith(dirPrefix)) {
+      categories = categories.concat(catsForDir[dirPrefix]);
+      break;
     }
   }
   
