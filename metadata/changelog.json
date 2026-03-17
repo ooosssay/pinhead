@@ -10203,6 +10203,11 @@
         "pr": "125"
       },
       {
+        "newId": "bohr_atomic_model",
+        "by": "@westnordost",
+        "pr": "136"
+      },
+      {
         "oldId": "plane",
         "newId": "plane_up",
         "by": "@quincylvania",
