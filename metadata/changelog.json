@@ -10163,7 +10163,7 @@
   },
   {
     "majorVersion": "17",
-    "date": "2026-03-16",
+    "date": "2026-03-17",
     "iconChanges": [
       {
         "oldId": "new_hampsire",
@@ -10206,6 +10206,125 @@
         "newId": "bohr_atomic_model",
         "by": "@westnordost",
         "pr": "136"
+      },
+      {
+        "newId": "elephant",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/MX_road_sign_SIT-56.svg",
+        "importBy": "@ooosssay",
+        "pr": "127",
+        "char": "🐘"
+      },
+      {
+        "newId": "rooster_fighting",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/MX_road_sign_SIT-42.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "baseball_bat_and_baseball",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/MX_road_sign_SIT-21.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "boxing_glove_up",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/MX_road_sign_SIT-64.svg",
+        "importBy": "@ooosssay",
+        "pr": "127",
+        "char": "🥊"
+      },
+      {
+        "newId": "jai_alai_cesta_and_ball",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/MX_road_sign_SIT-35.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_dancing_with_person_wearing_dress",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/MX_road_sign_SIT-58.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "people_wearing_traditional_festive_latin_clothes",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/bc/MX_road_sign_SIT-27.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_wearing_martial_arts_belt_front_kicking",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/MX_road_sign_SIT-62.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_holding_barbell",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/MX_road_sign_SIT-70.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_wearing_racing_helmet_driving_go_kart",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/MX_road_sign_SIT-31.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_jumping_over_obstacle",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/MX_road_sign_SIT-63.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_standing",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/MX_road_sign_SIT-70.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "person_wearing_cowboy_hat_holding_coiled_rope",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/MX_road_sign_SIT-38.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "ice_skate",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/MX_road_sign_SIT-69.svg",
+        "importBy": "@ooosssay",
+        "pr": "127",
+        "char": "⛸️"
+      },
+      {
+        "newId": "inline_skate",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/MX_road_sign_SIT-68.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "chess_knight",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/74/MX_road_sign_SIT-36.svg",
+        "importBy": "@ooosssay",
+        "pr": "127",
+        "char": [
+          "♘",
+          "♞"
+        ]
+      },
+      {
+        "newId": "lucha_libre_mask",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/MX_road_sign_SIT-61.svg",
+        "importBy": "@ooosssay",
+        "pr": "127"
+      },
+      {
+        "newId": "soccer_ball",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d9/MX_road_sign_SIT-28.svg",
+        "importBy": "@ooosssay",
+        "pr": "127",
+        "char": [
+          "⚽️",
+          "⚽︎"
+        ]
       },
       {
         "oldId": "plane",
