@@ -8,7 +8,7 @@ So you're making a map and need some icons. Well, maybe a lot of icons. Like, fo
 
 This happened to me while building [themap.is](https://github.com/waysidemapping/themap.is). I put together this icon library in case it happens to you too. It's called **Pinhead**.
 
-Pinhead is an active, collaborative project. There are now over 1,200 total icons, including [standardized versions](https://pinhead.ink/coverage) of the most popular public domain cartographic icon sets: [Maki](https://github.com/mapbox/maki), [Temaki](https://github.com/rapideditor/temaki), [OSM Carto](https://github.com/openstreetmap-carto/openstreetmap-carto), and [NPMap](https://github.com/nationalparkservice/symbol-library).
+Pinhead is an active, collaborative project. There are now over 1,500 total icons, including [standardized versions](https://pinhead.ink/coverage) of the most popular public domain cartographic icon sets: [Maki](https://github.com/mapbox/maki), [Temaki](https://github.com/rapideditor/temaki), [OSM Carto](https://github.com/openstreetmap-carto/openstreetmap-carto), and [NPMap](https://github.com/nationalparkservice/symbol-library).
 
 ## Overview
 
@@ -25,40 +25,53 @@ A small community is developing around Pinhead! We're working to make this the b
 
 ## Usage
 
-There are a few easy ways to access the icons depending on what you're trying to do.
+There are a number of ways to get Pinhead icons. But before you get started, you'll want to be aware of a few things:
 
-Visit [pinhead.ink](https://pinhead.ink) to browse the icons. Each icon has a download link, a copyable `<svg>` code, and an embeddable `<img>` code. These links are permanent and will not break in the future even if an icon is deleted or renamed, so feel to save, share, or embed them.
+- **Churn**: Pinhead is an active project receiving regular updates. If you want stability, use a specific version of Pinhead. If you want to stay up-to-date with the latest version, be aware that icons may change. Developers can use the `changelog.json` file to deal with changes automatically.
+- **Verison numbers**: Each Pinhead version number refers to a complete, static set of icons. The version number increments whenever an icon is added, deleted, renamed, or otherwise changed. This ensures version integrity, so that two apps running the same Pinhead version will have the same icons.
+- **Content warning**: Pinhead aims to be comprehensive and contains icons that some audiences may find objectionable. Sensitive users should review any icons they plan to redistribute or display to others.
 
-If you want to get the full set of icon files, use the download link on pinhead.ink for the most recent version. Or, you can browse all version in the [releases](https://github.com/waysidemapping/pinhead/releases).
+### Getting an icon
 
-#### Verison numbers
+Visit [pinhead.ink](https://pinhead.ink) to browse the icons. Each icon has a download link, a copyable `<svg>` code, and an embeddable `<img>` code. These links are permanent and will not break in the future even if an icon is deleted or renamed, so feel free to save, share, or embed them.
 
-The Pinhead version number is just an integer that increments whenever an icon changes. This includes, adding, deleting, renaming, or making any visual modification to icons. The goal is total version integrity, where each Pinhead version number refers to a complete and static set of icons that that can exist in isolation. This way, two apps that are both using the same Pinhead version will always have the same icons.
+### Getting all the icons
 
-### For Wikimedia editors
+If you want to get the full set of icon files, use the `download` link on [pinhead.ink](https://pinhead.ink) for the most recent version. The zipped file is <1 MB. You can also browse [past versions](https://github.com/waysidemapping/pinhead/releases). Each release contains the following:
 
-All Pinhead icons are [synced to Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Plain_black_Pinhead_SVG_icons) for convenient integration with Wikipedia, Wikidata, the OpenStreetMap Wiki, and other such projects.
+- `dist/icons/*.svg`: the individual icon SVG files
+- `dist/icons/index.json`: a list of all the available icons in this version
+- `dist/icons/index.complete.json`: same as the above but with the SVG code included inline
+- `dist/changelog.json`: a machine-readable list of icon additions, deletions, and renames between major versions
+- `dist/external_sources.json`: a detailed list of the external icons sources referenced in `changelog.json`
 
-### For developers
+### Using hosted
 
-Pinhead is intended to be developer friendly.
+The above files are also hosted on pinhead.ink (through GitHub Pages) at the following URLs. You can point your app directly to these endpoints.
 
-#### Node.js
+- For each version:
+  - `https://pinhead.ink/v*/*.svg`
+  - `https://pinhead.ink/v*/index.json`
+  - `https://pinhead.ink/v*/index.complete.json`
+- For the latest version only:
+  - `https://pinhead.ink/changelog.json`
+  - `https://pinhead.ink/external_sources.json`
 
-Node developers can install Pinhead as usual:
+It is *not* recommended for production apps to depend directly on the GitHub repository or any of its raw files as these may change without notice.
+
+### Using in Wikimedia
+
+All Pinhead icons are [synced to Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Plain_black_Pinhead_SVG_icons) for convenient integration with Wikipedia, Wikidata, the OpenStreetMap Wiki, and other such projects. These files are easy to [search](https://commons.wikimedia.org/w/index.php?search=pinhead+icon&title=Special%3AMediaSearch&go=Go&type=image&filemime=svg).
+
+### Using in Node.js
+
+Node developers can install Pinhead as usual. The npm package has no dependencies and is basically just a directory of SVG files and JSON metadata.
 
 ```
 npm install @waysidemapping/pinhead
 ```
 
-This npm package uses a flavor of semantic versioning (major.minor.patch). As of v15, the Pinhead version number corresponds to the minor version of the package instead of the major version. If your app expects the icons to be static, depend on the package like (`~x.x.0`). If your app can automatically handle icons changes, perhaps by reading the `changelog.json` file, then depend on the package like (`^x.x.0`). We'll only increment the major version if there is a breaking change to the package format, in which case the minor version will NOT reset to zero but will remain the Pinhead version number.
-
-Pinhead has no dependencies and is basically just a directory of SVG files. A few convenience files are included:
-
-- `dist/icons/index.json`: a list of all the available icons in this version
-- `dist/icons/index.complete.json`: same as the above but with the SVG code included inline
-- `dist/changelog.json`: a machine-readable list of icon additions, deletions, and renames between major versions
-- `dist/external_sources.json`: a detailed list of the external icons sources referenced in changelog.json
+This package uses a special flavor of semantic versioning (`major.minor.patch`), with the Pinhead version number corresponding to the minor version. If your app expects the icons to be static, depend on the package like (`~x.x.0`). If your app can automatically handle icons changes, i.e. by reading the `changelog.json` file, then depend on the package like (`^x.x.0`). We'll only increment the major version if there is a breaking change to the package format, in which case the minor version will NOT reset to zero but will remain the Pinhead version number. Note that prior to v15, the Pinhead version number corresponded to the major package version instead of the minor.
 
 ## Where the icons are from
 
