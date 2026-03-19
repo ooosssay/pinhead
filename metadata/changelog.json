@@ -10562,5 +10562,18 @@
         ]
       }
     ]
+  },
+  {
+    "majorVersion": "18",
+    "date": "",
+    "iconChanges": [
+      {
+        "newId": "double_diamond_tall",
+        "by": "@dschep",
+        "inspo": [
+          "diamond_tall"
+        ]
+      }
+    ]
   }
 ]
