@@ -47,13 +47,14 @@ const entities = await downloadEntityStatements(Object.keys(validRemotePages))
 for (const item of entities) {
   const pageid = item.pageid;
   const page = validRemotePages[pageid];
-  if (!page) {
+  if (page) {
+    // statements will be undefined if none have been added yet
+    page.statements = item.statements || [];
+  } else {
     console.error('Cannot find page for: ' + pageid);
     console.log(item);
     console.error('Continuing anyway...');
   }
-  // statements will be undefined if none have been added yet
-  page.statements = item.statements || [];
 }
 
 await uploadEntityStatements()
