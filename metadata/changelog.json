@@ -11230,6 +11230,12 @@
         "pr": "146"
       },
       {
+        "oldId": "yen_yuan",
+        "newId": "yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
         "oldId": "noodle_bowl_and_chopsticks_with_noodles",
         "newId": "noodle_bowl_and_chopsticks_with_noodles",
         "by": "@westnordost",
@@ -11324,6 +11330,78 @@
         "newId": "target_with_archery_arrow_at_bullseye",
         "by": "@westnordost",
         "pr": "146"
+      },
+      {
+        "newId": "person_using_terminal_kiosk_with_euro",
+        "by": "@quincylvania",
+        "inspo": "person_using_terminal_kiosk_with_dollar"
+      },
+      {
+        "newId": "person_using_terminal_kiosk_with_yen_yuan",
+        "by": "@quincylvania",
+        "inspo": "person_using_terminal_kiosk_with_dollar",
+        "issue": "77"
+      },
+      {
+        "newId": "person_using_terminal_kiosk_with_pound",
+        "by": "@quincylvania",
+        "inspo": "person_using_terminal_kiosk_with_dollar"
+      },
+      {
+        "newId": "milk_carton_and_apple",
+        "by": "@quincylvania",
+        "inspo": "milk_carton_and_apple_and_euro"
+      },
+      {
+        "oldId": "milk_carton_and_apple_and_euro",
+        "newId": "milk_carton_and_apple_and_euro",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "milk_carton_and_apple_and_pound",
+        "by": "@quincylvania",
+        "inspo": "milk_carton_and_apple_and_euro"
+      },
+      {
+        "newId": "milk_carton_and_apple_and_yen_yuan",
+        "by": "@quincylvania",
+        "inspo": "milk_carton_and_apple_and_euro",
+        "issue": "77"
+      },
+      {
+        "newId": "milk_carton_and_apple_and_dollar",
+        "by": "@quincylvania",
+        "inspo": "milk_carton_and_apple_and_euro"
+      },
+      {
+        "newId": "tag_with_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
+        "newId": "car_with_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
+        "newId": "bicycle_and_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
+        "newId": "cargobike_and_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
+        "newId": "campsite_with_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
+      },
+      {
+        "newId": "tipi_campsite_with_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "77"
       },
       {
         "newId": "apple_core",
