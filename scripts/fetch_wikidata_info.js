@@ -35,10 +35,18 @@ const properties = {
 };
 
 const allProps = Object.values(properties).flat();
-const allUniqueEntities = Array.from(new Set(entities.map(entity => Object.keys(entity.statements).filter(key => allProps.includes(key)).map(key => entity.statements[key]))
-  .flat(2)
-  .map(statement => statement.mainsnak?.datavalue?.value?.id)
-  .filter(Boolean)))
+const allUniqueEntities = Array.from(
+    new Set(
+      entities.map(entity => {
+        return Object.keys(entity.statements || {})
+          .filter(key => allProps.includes(key))
+          .map(key => entity.statements[key]);
+      })
+      .flat(2)
+      .map(statement => statement.mainsnak?.datavalue?.value?.id)
+      .filter(Boolean)
+    )
+  )
   .toSorted((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)));
 
 const wikidataData = await fetchWikidataEntities(allUniqueEntities, ['P13786', 'P1282']);
@@ -49,7 +57,7 @@ for (const entity of entities) {
   const pinheadId = pinheadIdByPageId[entity.pageid];
   for (const attr in properties) {
     for (const prop of properties[attr]) {
-      if (entity.statements[prop]) {
+      if (entity.statements && entity.statements[prop]) {
         for (const statement of entity.statements[prop]) {
           const qid = statement.mainsnak?.datavalue?.value?.id;
           if (qid) {
