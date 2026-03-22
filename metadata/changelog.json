@@ -11069,7 +11069,7 @@
         "issue": "148"
       },
       {
-        "newId": "bench_with_backrest_and_armrests",
+        "newId": "bench_with_armrests_and_backrest",
         "by": "@quincylvania",
         "inspo": "bench_with_backrest",
         "issue": "148",
@@ -11091,9 +11091,29 @@
         "inspo": "bench_with_backrest"
       },
       {
-        "newId": "person_sitting_on_bench_with_backrest_and_armrests",
+        "newId": "person_sitting_on_bench_with_armrests_and_backrest",
         "by": "@quincylvania",
-        "inspo": "bench_with_backrest_and_armrests"
+        "inspo": "bench_with_armrests_and_backrest"
+      },
+      {
+        "newId": "bench_with_plaque",
+        "by": "@quincylvania",
+        "inspo": "bench"
+      },
+      {
+        "newId": "bench_with_plaque_and_armrests",
+        "by": "@quincylvania",
+        "inspo": "bench_with_armrests"
+      },
+      {
+        "newId": "bench_with_backrest_with_plaque",
+        "by": "@quincylvania",
+        "inspo": "bench_with_backrest"
+      },
+      {
+        "newId": "bench_with_armrests_and_backrest_with_plaque",
+        "by": "@quincylvania",
+        "inspo": "bench_with_armrests_and_backrest"
       }
     ]
   }
