@@ -89,6 +89,14 @@ for (const entity of entities) {
   }
 }
 
+function ensureEmptyDir(dir) {
+  if (existsSync(dir)) {
+    rmSync(dir, { recursive: true, force: true });
+  }
+  mkdirSync(dir, { recursive: true });
+}
+ensureEmptyDir('docs/translations');
+
 writeFileSync('docs/commons_metadata.json', JSON.stringify({ date: new Date().toISOString(), iconStatements: dataByPinheadId }));
 for (const lang in translationsByLang) {
   writeFileSync(`docs/translations/${lang}.json`, JSON.stringify(translationsByLang[lang]));
