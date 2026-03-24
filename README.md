@@ -67,9 +67,9 @@ All Pinhead icons are [synced to Wikimedia Commons](https://commons.wikimedia.or
 
 Pinhead is distributed in two different packages for Node developers. The packages have no dependencies and contain no code.
 
-- **[@waysidemapping/pinhead](https://www.npmjs.com/package/@waysidemapping/pinhead)**: SVG icons and JSON metadata files
-  - `npm install @waysidemapping/pinhead-font`
-- **[@waysidemapping/pinhead-font](https://www.npmjs.com/package/@waysidemapping/pinhead-font)**: Icon font and CSS for use on webpages
+- [@waysidemapping/pinhead](https://www.npmjs.com/package/@waysidemapping/pinhead): SVG icons and JSON metadata files
+  - `npm install @waysidemapping/pinhead`
+- [@waysidemapping/pinhead-font](https://www.npmjs.com/package/@waysidemapping/pinhead-font): Icon font and CSS for use on webpages
   - `npm install @waysidemapping/pinhead-font`
 
 These packages use a special flavor of semantic versioning (`major.minor.patch`), with the Pinhead version number corresponding to the minor version. If your app expects the icons to be static, depend on the package like (`~x.x.0`). If your app can automatically handle icons changes, i.e. by reading the `changelog.json` file, then depend on the package like (`^x.x.0`). We'll only increment the major version if there is a breaking change to the package format, in which case the minor version will NOT reset to zero but will remain the Pinhead version number. Note that prior to v15, the Pinhead version number of `@waysidemapping/pinhead` corresponded to the major package version instead of the minor.
