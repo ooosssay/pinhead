@@ -11741,6 +11741,22 @@
         "newId": "tipi_campsite_with_peso",
         "by": "@quincylvania",
         "issue": "156"
+      },
+      {
+        "newId": "four_square_court",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "pr": "162"
+      },
+      {
+        "newId": "four_square_court_with_ball",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "pr": "162"
       }
     ]
   }
