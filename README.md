@@ -49,9 +49,12 @@ If you want to get the full set of icon files, use the `download` link on [pinhe
 
 If you want easy access to all the Pinhead icons on your website, the easiest solution is to use the web font.
 
-1. Link the hosted CSS file in your `<head>` element: `<link href="https://pinhead.ink/v{{VERSION}}/pinhead.css" rel="stylesheet"/>`
-2. Add icon elements with a class in the format `pinhead-ICON_ID`, like so: `<span class="pinhead-box_truck"></span>`
-3. Style like text, for example: `font-size: 15px; color: navy; text-decoration: underline solid 2px red;`
+1. Link the hosted CSS file for the latest Pinhead version in your `<head>` element:
+  - `<link href="https://pinhead.ink/v{{VERSION}}/pinhead.css" rel="stylesheet"/>`
+2. Add icon elements with a class in the format `pinhead-ICON_ID`:
+  - `<span class="pinhead-box_truck"></span>`
+3. Style like text:
+  - `font-size: 15px; color: navy; text-decoration: underline solid 2px red;`
 
 ### Hosted icons
 
