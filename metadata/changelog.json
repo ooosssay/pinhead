@@ -11572,6 +11572,12 @@
         "newId": "pixel_ruble",
         "by": "@quincylvania",
         "issue": "159"
+      },
+      {
+        "newId": "person_wearing_seatbelt",
+        "by": "@ooosssay",
+        "issue": "37",
+        "pr": "161"
       }
     ]
   }
