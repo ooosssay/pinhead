@@ -11586,6 +11586,47 @@
         "by": "@ooosssay",
         "issue": "37",
         "pr": "161"
+      },
+      {
+        "newId": "passport_with_belgium",
+        "src": "opengemeenten",
+        "importBy": "@quincylvania",
+        "issue": "141",
+        "opengemeenten": "l10n/BE/Paspoort"
+      },
+      {
+        "newId": "belgium",
+        "by": "@quincylvania",
+        "inspo": "passport_with_belgium"
+      },
+      {
+        "newId": "belgium_with_capital_star",
+        "by": "@quincylvania",
+        "inspo": "belgium"
+      },
+      {
+        "newId": "passport_with_netherlands",
+        "src": "opengemeenten",
+        "importBy": "@quincylvania",
+        "issue": "141",
+        "opengemeenten": "l10n/NL/Paspoort"
+      },
+      {
+        "newId": "netherlands",
+        "by": "@quincylvania",
+        "inspo": "passport_with_netherlands"
+      },
+      {
+        "newId": "netherlands_with_capital_star",
+        "by": "@quincylvania",
+        "inspo": "netherlands"
+      },
+      {
+        "newId": "passport_with_bundesadler",
+        "src": "opengemeenten",
+        "importBy": "@quincylvania",
+        "issue": "141",
+        "opengemeenten": "l10n/DE/Paspoort"
       }
     ]
   }
