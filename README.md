@@ -42,20 +42,30 @@ If you want to get the full set of icon files, use the `download` link on [pinhe
 - `dist/icons/*.svg`: the individual icon SVG files
 - `dist/icons/index.json`: a list of all the available icons in this version
 - `dist/icons/index.complete.json`: same as the above but with the SVG code included inline
-- `dist/changelog.json`: a machine-readable list of icon additions, deletions, and renames between major versions
+- `dist/changelog.json`: a machine-readable list of icon additions, deletions, and renames between Pinhead versions
 - `dist/external_sources.json`: a detailed list of the external icon sources referenced in `changelog.json`
+
+### Web font
+
+If you want easy access to all the Pinhead icons on your website, the easiest solution is to use the web font.
+
+1. Link the hosted CSS file in your `<head>` element: `<link href="https://pinhead.ink/v{{VERSION}}/pinhead.css" rel="stylesheet"/>`
+2. Add icon elements with a class in the format `pinhead-ICON_ID`, like so: `<span class="pinhead-box_truck"></span>`
+3. Style like text, for example: `font-size: 15px; color: navy; text-decoration: underline solid 2px red;`
 
 ### Hosted icons
 
-The above files are also hosted on pinhead.ink (through GitHub Pages) at the following URLs. You can point your app directly to these endpoints.
+The following files are hosted on pinhead.ink (through GitHub Pages) at the following URLs. You can point your app directly to these endpoints as they are stable.
 
 - For each version:
-  - `https://pinhead.ink/v*/*.svg`
-  - `https://pinhead.ink/v*/index.json`
-  - `https://pinhead.ink/v*/index.complete.json`
+  - `https://pinhead.ink/v*/*.svg`: the individual icon SVG files
+  - `https://pinhead.ink/v*/index.json`: a list of all the available icons in this version
+  - `https://pinhead.ink/v*/index.complete.json`: same as the above but with the SVG code included inline
+  - `https://pinhead.ink/v*/pinhead.ttf`: icons compiled into a font file
+  - `https://pinhead.ink/v*/pinhead.css`: stylesheet for easy web usage of the font file
 - For the latest version only:
-  - `https://pinhead.ink/changelog.json`
-  - `https://pinhead.ink/external_sources.json`
+  - `https://pinhead.ink/changelog.json`: a machine-readable list of icon additions, deletions, and renames between Pinhead versions
+  - `https://pinhead.ink/external_sources.json`: a detailed list of the external icon sources referenced in `changelog.json`
 
 It is *not* recommended for production apps to depend directly on the GitHub repository or any of its raw files as these may change without notice.
 
@@ -69,7 +79,7 @@ Pinhead is distributed in two different packages for Node developers. The packag
 
 - [@waysidemapping/pinhead](https://www.npmjs.com/package/@waysidemapping/pinhead): SVG icons and JSON metadata files
   - `npm install @waysidemapping/pinhead`
-- [@waysidemapping/pinhead-font](https://www.npmjs.com/package/@waysidemapping/pinhead-font): Icon font and CSS for use on webpages
+- [@waysidemapping/pinhead-font](https://www.npmjs.com/package/@waysidemapping/pinhead-font): icon font and CSS for use on webpages
   - `npm install @waysidemapping/pinhead-font`
 
 These packages use a special flavor of semantic versioning (`major.minor.patch`), with the Pinhead version number corresponding to the minor version. If your app expects the icons to be static, depend on the package like (`~x.x.0`). If your app can automatically handle icons changes, i.e. by reading the `changelog.json` file, then depend on the package like (`^x.x.0`). We'll only increment the major version if there is a breaking change to the package format, in which case the minor version will NOT reset to zero but will remain the Pinhead version number. Note that prior to v15, the Pinhead version number of `@waysidemapping/pinhead` corresponded to the major package version instead of the minor.
