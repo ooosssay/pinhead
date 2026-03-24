@@ -11542,6 +11542,36 @@
       {
         "newId": "africa_and_madagascar",
         "by": "@quincylvania"
+      },
+      {
+        "newId": "pixel_dollar",
+        "by": "@quincylvania",
+        "issue": "159"
+      },
+      {
+        "newId": "pixel_euro",
+        "by": "@quincylvania",
+        "issue": "159"
+      },
+      {
+        "newId": "pixel_pound",
+        "by": "@quincylvania",
+        "issue": "159"
+      },
+      {
+        "newId": "pixel_yen_yuan",
+        "by": "@quincylvania",
+        "issue": "159"
+      },
+      {
+        "newId": "pixel_rupee",
+        "by": "@quincylvania",
+        "issue": "159"
+      },
+      {
+        "newId": "pixel_ruble",
+        "by": "@quincylvania",
+        "issue": "159"
       }
     ]
   }
