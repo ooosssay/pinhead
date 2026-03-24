@@ -11638,6 +11638,37 @@
         "newId": "shopping_bag",
         "by": "@quincylvania",
         "inspo": "shopping_bag_with_heart"
+      },
+      {
+        "newId": "shopping_bag_with_dollar",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart"
+      },
+      {
+        "newId": "shopping_bag_with_euro",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart",
+        "opengemeenten": "Winkelen"
+      },
+      {
+        "newId": "shopping_bag_with_pound",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart"
+      },
+      {
+        "newId": "shopping_bag_with_yen_yuan",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart"
+      },
+      {
+        "newId": "shopping_bag_with_rupee",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart"
+      },
+      {
+        "newId": "shopping_bag_with_ruble",
+        "by": "@quincylvania",
+        "inspo": "shopping_bag_with_heart"
       }
     ]
   }
