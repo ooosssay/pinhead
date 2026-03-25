@@ -23,7 +23,7 @@ This release contains new and redesigned icons that may affect your setup. A mac
 - <img src="https://pinhead.ink/v20/circle_a.svg" width="15px"/> Add `circle_a` by [@ooosssay](https://github.com/ooosssay) ([#163](https://github.com/waysidemapping/pinhead/issues/163))
 - <img src="https://pinhead.ink/v20/tags.svg" width="15px"/> Add `tags` by [@quincylvania](https://github.com/quincylvania)
 
-Added boundary icons:
+Add boundary icons:
 
 - <img src="https://pinhead.ink/v20/africa.svg" width="15px"/> Add `africa` by [@quincylvania](https://github.com/quincylvania)
 - <img src="https://pinhead.ink/v20/africa_and_madagascar.svg" width="15px"/> Add `africa_and_madagascar` by [@quincylvania](https://github.com/quincylvania)
@@ -34,7 +34,7 @@ Added boundary icons:
 - <img src="https://pinhead.ink/v20/netherlands.svg" width="15px"/> Add `netherlands` by [@quincylvania](https://github.com/quincylvania)
 - <img src="https://pinhead.ink/v20/netherlands_with_capital_star.svg" width="15px"/> Add `netherlands_with_capital_star` by [@quincylvania](https://github.com/quincylvania)
 
-Added shopping bag icons:
+Add shopping bag icons:
 
 - <img src="https://pinhead.ink/v20/shopping_bag_with_dollar.svg" width="15px"/> Add `shopping_bag_with_dollar` by [@quincylvania](https://github.com/quincylvania)
 - <img src="https://pinhead.ink/v20/shopping_bag_with_arrows_recirculating.svg" width="15px"/> Add `shopping_bag_with_arrows_recirculating` by [@quincylvania](https://github.com/quincylvania)
@@ -44,7 +44,7 @@ Added shopping bag icons:
 - <img src="https://pinhead.ink/v20/shopping_bag_with_rupee.svg" width="15px"/> Add `shopping_bag_with_rupee` by [@quincylvania](https://github.com/quincylvania)
 - <img src="https://pinhead.ink/v20/shopping_bag_with_ruble.svg" width="15px"/> Add `shopping_bag_with_ruble` by [@quincylvania](https://github.com/quincylvania)
 
-Added Philippine peso icons:
+Add Philippine peso icons:
 
 - <img src="https://pinhead.ink/v20/peso.svg" width="15px"/> Add `peso` by [@quincylvania](https://github.com/quincylvania) ([#156](https://github.com/waysidemapping/pinhead/issues/156))
 - <img src="https://pinhead.ink/v20/person_using_terminal_kiosk_with_peso.svg" width="15px"/> Add `person_using_terminal_kiosk_with_peso` by [@quincylvania](https://github.com/quincylvania) ([#156](https://github.com/waysidemapping/pinhead/issues/156))
