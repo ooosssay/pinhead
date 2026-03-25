@@ -9213,6 +9213,7 @@
         "src": "healthicons",
         "importBy": "@quincylvania",
         "issue": "107",
+        "sensitive": "nudity",
         "healthicons": "body/anus"
       },
       {
@@ -9269,6 +9270,7 @@
         "src": "healthicons",
         "importBy": "@quincylvania",
         "issue": "107",
+        "sensitive": "nudity",
         "healthicons": "body/vagina-alt"
       },
       {
@@ -9379,13 +9381,15 @@
         "newId": "male_genitalia",
         "by": "@quincylvania",
         "inspo": "male_genitalia_with_urethra",
-        "issue": "107"
+        "issue": "107",
+        "sensitive": "nudity"
       },
       {
         "newId": "male_genitalia_with_urethra",
         "src": "healthicons",
         "importBy": "@quincylvania",
         "issue": "107",
+        "sensitive": "nudity",
         "healthicons": "body/penis"
       },
       {
@@ -9393,6 +9397,7 @@
         "src": "healthicons",
         "importBy": "@quincylvania",
         "issue": "107",
+        "sensitive": "nudity",
         "healthicons": "body/testicles"
       },
       {
@@ -9400,6 +9405,7 @@
         "src": "healthicons",
         "importBy": "@quincylvania",
         "issue": "107",
+        "sensitive": "nudity",
         "healthicons": "body/penis-alt"
       },
       {
@@ -11792,17 +11798,14 @@
       {
         "newId": "swastika",
         "by": "@ooosssay",
-        "pr": "163"
+        "pr": "163",
+        "sensitive": "hate"
       },
       {
         "newId": "sauvastika",
         "by": "@ooosssay",
-        "pr": "163"
-      },
-      {
-        "newId": "circle_a",
-        "by": "@ooosssay",
-        "pr": "163"
+        "pr": "163",
+        "sensitive": "hate"
       },
       {
         "newId": "four_square_court",
@@ -11819,6 +11822,11 @@
           "@quincylvania"
         ],
         "pr": "162"
+      },
+      {
+        "newId": "circle_a",
+        "by": "@ooosssay",
+        "pr": "163"
       }
     ]
   }

@@ -29,7 +29,7 @@ There are a number of ways to get Pinhead icons. But before you get started, you
 
 - **Churn**: Pinhead is an active project receiving regular updates. If you want stability, use a specific version of Pinhead. If you want to stay up-to-date with the latest version, be aware that icons may change. Developers can use the `changelog.json` file to deal with changes automatically.
 - **Verison numbers**: Each Pinhead version number refers to a complete, static set of icons. The version number increments whenever an icon is added, deleted, renamed, or otherwise changed. This ensures version integrity, so that two apps running the same Pinhead version will have the same icons.
-- **Content warning**: Pinhead aims to be comprehensive and contains icons that some audiences may find objectionable. Sensitive users should review any icons they plan to redistribute or display to others.
+- **Content warning**: Pinhead aims to be comprehensive and contains icons that some audiences may find objectionable. Icons commonly considered problematic are marked `sensitive` in the metadata files, but concerned users should manually review any icons they plan to redistribute or display to others.
 
 ### Getting an icon
 
