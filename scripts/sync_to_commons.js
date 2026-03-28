@@ -135,6 +135,7 @@ function commonsPageCategoriesText(pinheadIconId) {
   }
   const catsForDir = {
     'abstract_symbols/arrows': ['Black SVG arrow icons'],
+    'abstract_symbols/campsite_symbols': ['Plain black SVG tent icons'],
     'abstract_symbols/currency_symbols': ['Currency icons'],
     'abstract_symbols/electrical_diagram_symbols': ['SVG electrical symbols'],
     'abstract_symbols/hearts': ['Plain black SVG heart icons'],
@@ -145,10 +146,12 @@ function commonsPageCategoriesText(pinheadIconId) {
     'boundaries/us': ['Plain black SVG icon maps of the United States'],
     boundaries: ['Plain black SVG icon maps'],
     briefcases: ['Plain black SVG briefcase icons'],
-    'abstract_symbols/campsite_symbols': ['Plain black SVG tent icons'],
     'buildings/castles': ['Plain black SVG castle icons'],
     'buildings/tents': ['Plain black SVG tent icons'],
     buildings: ['Plain black SVG building icons'],
+    'clothing/footwear': ['Plain black SVG footwear icons'],
+    'clothing/headwear': ['Plain black SVG headgear icons'],
+    clothing: ['Plain black SVG clothing icons'],
     food_and_drink: ['Plain black SVG food and drink icons'],
     hand_tools: ['Plain black SVG tool icons'],
     landforms: ['SVG nature icons'],
