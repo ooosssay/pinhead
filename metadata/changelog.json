@@ -11987,6 +11987,30 @@
         "by": "@quincylvania"
       },
       {
+        "oldId": "typha_and_duck_in_water",
+        "newId": "typha_and_duck_in_water",
+        "by": "@ooosssay",
+        "pr": "168"
+      },
+      {
+        "newId": "duck_in_water",
+        "by": "@ooosssay",
+        "inspo": "typha_and_duck_in_water",
+        "pr": "168"
+      },
+      {
+        "newId": "duck",
+        "by": "@ooosssay",
+        "inspo": "typha_and_duck_in_water",
+        "pr": "168"
+      },
+      {
+        "newId": "typha_in_water",
+        "by": "@ooosssay",
+        "inspo": "typha_and_duck_in_water",
+        "pr": "168"
+      },
+      {
         "newId": "vending_machine",
         "by": "@quincylvania",
         "nps": "vending-machine"
