@@ -11940,7 +11940,8 @@
       {
         "newId": "taco",
         "by": "@ooosssay",
-        "pr": "178"
+        "pr": "178",
+        "char": "🌮"
       },
       {
         "newId": "chopsticks",
@@ -12002,7 +12003,8 @@
         "newId": "duck",
         "by": "@ooosssay",
         "inspo": "typha_and_duck_in_water",
-        "pr": "168"
+        "pr": "168",
+        "char": "🦆"
       },
       {
         "newId": "typha_in_water",
