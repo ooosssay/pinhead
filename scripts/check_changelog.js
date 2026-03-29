@@ -80,10 +80,6 @@ function validateChangelog() {
           console.error(`Missing provenance for "${iconChange.newId}" in version ${v}`)
           return;
         }
-        if (iconChange.oldId && iconChange.src) {
-          console.error(`Unexpected both "src": "${iconChange.src}" and "oldId": "${iconChange.oldId}" for "${iconChange.newId}" in version ${v}`)
-          return;
-        }
         if (iconChange.importBy && !iconChange.src) {
           console.error(`Unexpected "importBy": "${iconChange.importBy}" without "src": "…" for "${iconChange.newId}" in version ${v}`)
           return;

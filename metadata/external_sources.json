@@ -47,6 +47,13 @@
     "ignoreFiles": "(^generating_patterns\\/)|(^shields\\/)|(^unpaved\\/)|(^[^/]+$)"
   },
   {
+    "id": "osmic",
+    "name": "Osmic",
+    "repo": "https://github.com/gmgeo/osmic.git",
+    "filenameSuffix": "-14",
+    "iconDir": ""
+  },
+  {
     "id": "temaki",
     "name": "Temaki",
     "repo": "https://github.com/rapideditor/temaki.git",
