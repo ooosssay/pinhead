@@ -11988,6 +11988,49 @@
         "by": "@quincylvania"
       },
       {
+        "newId": "whistle",
+        "by": "@ooosssay",
+        "pr": "170"
+      },
+      {
+        "newId": "pawprint_and_whistle",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "pr": "170"
+      },
+      {
+        "newId": "dog_sitting_wearing_collar_and_whistle",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "pr": "170"
+      },
+      {
+        "newId": "dog_sitting_wearing_harness_and_whistle",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ]
+      },
+      {
+        "newId": "pawprints_and_heart",
+        "by": "@ooosssay",
+        "pr": "170"
+      },
+      {
+        "newId": "shopping_bag_with_pawprint",
+        "by": "@ooosssay",
+        "pr": "170"
+      },
+      {
+        "newId": "cup_and_saucer_and_pawprint",
+        "by": "@ooosssay",
+        "pr": "170"
+      },
+      {
         "oldId": "typha_and_duck_in_water",
         "newId": "typha_and_duck_in_water",
         "by": "@ooosssay",

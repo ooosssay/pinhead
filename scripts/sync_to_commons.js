@@ -143,6 +143,7 @@ function commonsPageCategoriesText(pinheadIconId) {
     'animals/birds': ['Plain black SVG bird icons'],
     'animals/dogs': ['Plain black SVG dog icons'],
     'animals/fish': ['Plain black SVG fish icons'],
+    'animals/pawprints': ['Plain black SVG pawprint icons'],
     animals: ['Plain black SVG animal icons'],
     benches: ['Plain black SVG bench icons'],
     body_parts: ['Plain black SVG medical icons'],
