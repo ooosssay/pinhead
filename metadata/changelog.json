@@ -12063,6 +12063,20 @@
         "char": "🌮"
       },
       {
+        "newId": "pretzel_with_salt",
+        "src": "https://raw.githubusercontent.com/twain47/Open-SVG-Map-Icons/refs/heads/master/svg/shopping/bakery.svg",
+        "importBy": "@ooosssay",
+        "issue": "21",
+        "pr": "179",
+        "char": "🥨"
+      },
+      {
+        "newId": "oak_leaf",
+        "by": "@ooosssay",
+        "issue": "22",
+        "pr": "179"
+      },
+      {
         "newId": "chopsticks",
         "by": [
           "@ooosssay",
