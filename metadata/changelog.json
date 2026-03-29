@@ -11943,6 +11943,45 @@
         "pr": "178"
       },
       {
+        "newId": "chopsticks",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "pr": "174"
+      },
+      {
+        "newId": "chopsticks_crossed",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ]
+      },
+      {
+        "newId": "spoon_and_chopsticks",
+        "by": "@ooosssay",
+        "inspo": "spoon",
+        "pr": "174"
+      },
+      {
+        "newId": "spoon_and_fork",
+        "by": "@ooosssay",
+        "inspo": [
+          "spoon",
+          "fork"
+        ],
+        "pr": "174"
+      },
+      {
+        "newId": "fork_and_spoon",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "inspo": "spoon_and_fork",
+        "osmcarto": "amenity/restaurant"
+      },
+      {
         "newId": "drink_can",
         "by": "@quincylvania"
       },
