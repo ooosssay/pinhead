@@ -18,16 +18,29 @@
       max-width: 600px;
       padding: 10px;
     }
+    table {
+      border-spacing: 0;
+    }
     th {
       position: sticky;
       top: 0;
+      
       background: #fff;
+    }
+    th.header {
+      z-index: 100000;
     }
     tr:empty {
       height: 22px;
     }
     td.header {
       font-weight:bold;
+      background: inherit;
+    }
+    th.header, td.header {
+      position: sticky;
+      left: 0;
+      border-right: 1px solid #fff;
     }
     td div {
       white-space: nowrap;
@@ -53,6 +66,9 @@
     }
     tr:nth-child(even) {
       background-color: #eeeeee;
+    }
+    tr:nth-child(odd) {
+      background-color: #fff;
     }
   </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MXM4VVNQP"></script>
@@ -140,7 +156,7 @@
 
     let html = ``;
     html += `<tr>`;
-    html += `<th><a href="/">Pinhead v${currentVersion}</a></th>`;
+    html += `<th class="header"><a href="/">Pinhead v${currentVersion}</a></th>`;
     html += `<th>Unicode</th>`;
     for (const importSource of importSources) {
       html += `<th><a href="${importSource.repo}" target="_blank">${importSource.name}</a></th>`
@@ -222,7 +238,7 @@
 
     function getExternalRow(importSource, externalIconFilename, withImg) {
       let html = '';
-      html += `<td></td><td></td>`;
+      html += `<td class="header"></td><td></td>`;
       for (const importSource2 of importSources) {
         html += `<td>`;
         if (importSource.id === importSource2.id) {
