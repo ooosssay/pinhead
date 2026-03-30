@@ -110,6 +110,7 @@ Pinhead is seeded from the following public domain sources. Thank you to all of 
 - <img src="https://pinhead.ink/v1/sushi.svg" width="15px"/> [Maki](https://github.com/mapbox/maki) ([CC0](https://github.com/mapbox/maki/blob/main/LICENSE.txt))
 - <img src="https://pinhead.ink/v1/bear.svg" width="15px"/> [NPMap Symbol Library](https://github.com/nationalparkservice/symbol-library) (public domain)
 - <img src="https://pinhead.ink/v1/beer_mug_with_foam.svg" width="15px"/> [OpenStreetMap Carto](https://github.com/openstreetmap-carto/openstreetmap-carto) ([CC0](https://github.com/openstreetmap-carto/openstreetmap-carto/blob/master/LICENSE.txt))
+- <img src="https://pinhead.ink/v21/oval_broadleaved_tree.svg" width="15px"/> [Osmic](https://github.com/gmgeo/osmic) ([CC0](https://github.com/gmgeo/osmic/blob/master/LICENSE.txt))
 - <img src="https://pinhead.ink/v15/dna.svg" width="15px"/> [Health Icons](https://github.com/resolvetosavelives/healthicons) ([CC0](https://healthicons.org/about#license))
 - <img src="https://pinhead.ink/v18/gull.svg" width="15px"/> [OpenGemeenten Iconenset](https://github.com/OpenGemeenten/Iconenset/) ([CC0](https://github.com/OpenGemeenten/Iconenset/blob/master/LICENSE.md))
 - <img src="https://pinhead.ink/v13/sailing_ship_in_water.svg" width="15px"/> [princesse](https://github.com/Viglino/map-font-symbols/tree/main/princesse) and [pirate](https://github.com/Viglino/map-font-symbols/tree/main/pirate) map icons by [@Viglino](https://github.com/Viglino) (CC0)
