@@ -1,11 +1,6 @@
 import { existsSync, readFileSync, writeFileSync, globSync } from "fs";
-import { exec } from "child_process";
-import { promisify } from "util";
-import fs from "fs/promises";
 import { join, parse } from "path";
-import os from "os";
-
-const workspace = await fs.mkdtemp(join(os.tmpdir(), "workspace-"));
+import { downloadExternalSourceAssets } from "../src/ExternalSourceManager.js";
 
 const version = JSON.parse(readFileSync('package.json')).version;
 const currentMajorVersion = version.split('.')[1];
@@ -22,6 +17,11 @@ globSync(`./icons/**/*.svg`).forEach(file => {
 for (const importSource of importSources) {
   importSource.seenIcons = {};
 }
+
+const externalSourceIconsDir = 'docs/srcicons';
+
+downloadExternalSourceAssets(externalSourceIconsDir);
+validateChangelog();
 
 function validateChangelog() {
 
@@ -122,7 +122,7 @@ function validateChangelog() {
               return;
             }
             const filename = id + (importSource.filenameSuffix || '') + '.svg';
-            const iconFile = join(repoPath(importSource.repo), importSource.iconDir || "", filename);
+            const iconFile = join(externalSourceIconsDir, importSource.id, filename);
             
             if (!existsSync(iconFile)) {
               console.error(`No such icon "${iconFile}" referenced by "${iconChange.newId}" in version ${v}`);
@@ -304,29 +304,3 @@ function printTextForChangelog(changelog) {
 function stringArray(value) {
   return (typeof value === 'string' ? [value] : [...value]);
 }
-
-function repoPath(repoUrl) {
-  const repoName = repoUrl.split("/").pop().replace(".git", "");
-  return join(workspace, repoName);
-}
-
-async function cloneTempRepos(repos, workFunction) {
-  try {
-    const execAsync = promisify(exec);
-    console.log("Cloning repos...")
-    await Promise.all(
-      repos.map(repoUrl => execAsync(`git clone --depth 1  ${repoUrl} "${repoPath(repoUrl)}"`))
-    );
-    console.log("All repos cloned");
-
-    workFunction();
-
-  } catch (err) {
-    console.error("Error:", err);
-  } finally {
-    await fs.rm(workspace, { recursive: true, force: true });
-  }
-}
-
-const repoUrls = importSources.map(obj => obj.repo);
-cloneTempRepos(repoUrls, validateChangelog);
