@@ -84,8 +84,9 @@ Pinhead is cartography-first, but has a broad inclusion policy to serve a wide r
 * Literal and abstract representations of places (e.g. mountain, triangle)
 * Specific public landmarks (e.g. Eiffel Tower, Statue of Liberty)
 * Attributes of places, such as goods, services, activities, and allowed access
-* Symbols of any kind known to be found in maps or atlases
-* Symbols that are useful in map-related software or games, such as UI buttons
+* Symbols of any kind found in maps or atlases, including historical
+* Symbols useful in map-related software (e.g. UI buttons, status indicators)
+* Symbols supporting nontraditional uses of map software (e.g. games, imaging)
 * Symbols found on real-world signage
 * Simple shapes (squares, circles, arrows)
 * Basic letters, numbers, and other text characters
