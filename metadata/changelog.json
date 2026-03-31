@@ -675,6 +675,7 @@
         "newId": "bolt",
         "src": "temaki",
         "importBy": "@quincylvania",
+        "maki": "charging-station",
         "temaki": "power"
       },
       {
@@ -1216,7 +1217,6 @@
         "src": "osmcarto",
         "importBy": "@quincylvania",
         "americana": "poi_charging_station",
-        "maki": "charging-station",
         "nps": "electric-car-charging",
         "opengemeenten": "ElektrischLaden",
         "osmcarto": "amenity/charging_station",
