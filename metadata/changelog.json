@@ -12439,6 +12439,21 @@
         "newId": "triangles_left_right_in_rectangle_outline",
         "by": "@quincylvania",
         "inspo": "triangles_left_right_in_rectangle"
+      },
+      {
+        "newId": "persons_gumdrop_head_on_shoulders",
+        "by": "@quincylvania",
+        "issue": "49"
+      },
+      {
+        "newId": "persons_circular_head_on_shoulders",
+        "by": "@quincylvania",
+        "issue": "49"
+      },
+      {
+        "newId": "pixel_persons_circular_head_on_shoulders",
+        "by": "@quincylvania",
+        "issue": "49"
       }
     ]
   }
