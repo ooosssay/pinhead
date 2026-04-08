@@ -52,7 +52,6 @@
     "sync_to_commons": "node scripts/sync_to_commons.js"
   },
   "devDependencies": {
-    "archiver": "^7.0.1",
     "chalk": "^5.2.0",
     "dotenv": "^17.3.1",
     "svg-path-parse": "^1.1.3",
