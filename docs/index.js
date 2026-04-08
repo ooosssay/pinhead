@@ -50,10 +50,14 @@ async function setupPage(pageData) {
     .map(iconChange => iconChange.newId);
 
   const parser = new DOMParser();
-  const icons = pageData.icons;
+  const iconsById = pageData.icons;
+  for (const id in iconsById) {
+    iconsById[id].id = id;
+  }
+  const iconsToDisplay = Object.values(iconsById).filter(icon => !icon.sensitive);
 
   const v1Changelog = changelogs.find(item => item.majorVersion === '1');
-  const iconsAddedSinceLaunch = Object.keys(icons).length - v1Changelog.iconChanges.length
+  const iconsAddedSinceLaunch = Object.keys(iconsById).length - v1Changelog.iconChanges.length
   const daysSinceLaunch = Date.now() / 1000 / 60 / 60 / 24 - new Date(v1Changelog.date).getTime() / 1000 / 60 / 60 / 24
   const iconsAddedPerDaySinceLaunch = iconsAddedSinceLaunch / daysSinceLaunch;
 
@@ -61,7 +65,7 @@ async function setupPage(pageData) {
 
   document.getElementById('icon-count')
     .replaceChildren(
-      new Intl.NumberFormat().format(Object.keys(icons).length)
+      new Intl.NumberFormat().format(Object.keys(iconsById).length)
     );
 
   document.getElementById('per-day-icon-count')
@@ -94,7 +98,7 @@ async function setupPage(pageData) {
         .setAttribute('class', 'icon-grid')
         .insertAdjacentHTML("afterbegin",
           newIconIds.map(iconId => {
-            const icon = icons[iconId];
+            const icon = iconsById[iconId];
             return new Chainable('a')
               .setAttribute('href', '#' + iconId)
               .setAttribute('title', iconId)
@@ -153,11 +157,10 @@ async function setupPage(pageData) {
 
   document.getElementById('icon-gallery')
     .insertAdjacentHTML("afterbegin",
-      Object.keys(icons).map(iconId => {
-        const icon = icons[iconId];
+      iconsToDisplay.map(icon => {
         return new Chainable('a')
-          .setAttribute('href', '#' + iconId)
-          .setAttribute('title', iconId)
+          .setAttribute('href', '#' + icon.id)
+          .setAttribute('title', icon.id)
           .insertAdjacentHTML("afterbegin", icon.svg)
         }
       ).join('')
@@ -165,9 +168,9 @@ async function setupPage(pageData) {
 
   document.getElementById('icon-list')
     .insertAdjacentHTML("afterbegin",
-      Object.keys(icons).map(iconId => {
+      iconsToDisplay.map(icon => {
         return new Chainable('div')
-          .setAttribute('id', iconId)
+          .setAttribute('id', icon.id)
           .setAttribute('class', 'icon-item')
           // add enough elements to make the placehold height match the final height 
           .append(
@@ -180,7 +183,7 @@ async function setupPage(pageData) {
                     // add icon name so we can find it with in-page search
                     new Chainable('span')
                       .setAttribute('class', 'icon-name')
-                      .append(iconId)
+                      .append(icon.id)
                   )
               ),
             new Chainable('div')
@@ -214,7 +217,7 @@ async function setupPage(pageData) {
 
   function loadIconItemInner(el) {
     const iconId = el.getAttribute('id');
-    const icon = icons[iconId];
+    const icon = iconsById[iconId];
     el.innerHTML = [
     new Chainable('div')
       .setAttribute('class', 'icon-item-header')
@@ -336,7 +339,7 @@ async function setupPage(pageData) {
       const scale = parseInt(canvas.getAttribute('scale'));
       const context = canvas.getContext("2d");
       if (scale !== 1) context.scale(scale, scale);
-      const paths = parser.parseFromString(icons[canvas.getAttribute('icon')].svg, "image/svg+xml")
+      const paths = parser.parseFromString(iconsById[canvas.getAttribute('icon')].svg, "image/svg+xml")
         .querySelectorAll("path")
         .values()
         .map(pathEl => new Path2D(pathEl.getAttribute("d")));
