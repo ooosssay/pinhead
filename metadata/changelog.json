@@ -12454,6 +12454,24 @@
         "newId": "pixel_persons_circular_head_on_shoulders",
         "by": "@quincylvania",
         "issue": "49"
+      },
+      {
+        "newId": "banana",
+        "by": "@ooosssay",
+        "issue": "35",
+        "pr": "186"
+      },
+      {
+        "newId": "banana_hand",
+        "by": "@ooosssay",
+        "issue": "35",
+        "pr": "186"
+      },
+      {
+        "newId": "banana_and_apple",
+        "by": "@ooosssay",
+        "issue": "35",
+        "pr": "186"
       }
     ]
   }
