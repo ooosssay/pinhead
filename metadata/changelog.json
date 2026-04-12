@@ -12441,17 +12441,17 @@
         "inspo": "triangles_left_right_in_rectangle"
       },
       {
-        "newId": "persons_gumdrop_head_on_shoulders",
+        "newId": "gumdrop_head_and_shoulders",
         "by": "@quincylvania",
         "issue": "49"
       },
       {
-        "newId": "persons_circular_head_on_shoulders",
+        "newId": "head_and_shoulders",
         "by": "@quincylvania",
         "issue": "49"
       },
       {
-        "newId": "pixel_persons_circular_head_on_shoulders",
+        "newId": "pixel_head_and_shoulders",
         "by": "@quincylvania",
         "issue": "49"
       },
