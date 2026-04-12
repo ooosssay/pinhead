@@ -12499,6 +12499,25 @@
         "issue": "10"
       },
       {
+        "newId": "e_wide",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "e_wide_with_parking_meter",
+        "by": "@quincylvania",
+        "inspo": "p_wide_with_parking_meter"
+      },
+      {
+        "newId": "parking_stall_markings_with_e_wide",
+        "by": "@quincylvania",
+        "inspo": "parking_stall_markings"
+      },
+      {
+        "newId": "e_wide_under_roof",
+        "by": "@quincylvania",
+        "inspo": "p_wide_under_roof"
+      },
+      {
         "newId": "f",
         "by": "@quincylvania",
         "issue": "10"
@@ -12554,6 +12573,26 @@
         "issue": "10"
       },
       {
+        "oldId": "parking_p",
+        "newId": "p_wide",
+        "by": "@quincylvania"
+      },
+      {
+        "oldId": "parking_p_with_parking_meter",
+        "newId": "p_wide_with_parking_meter",
+        "by": "@quincylvania"
+      },
+      {
+        "oldId": "parking_p_under_roof",
+        "newId": "p_wide_under_roof",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "parking_stall_markings_with_p_wide",
+        "by": "@quincylvania",
+        "inspo": "parking_stall_markings"
+      },
+      {
         "newId": "q",
         "by": "@quincylvania",
         "issue": "10"
@@ -12603,45 +12642,6 @@
         "newId": "z",
         "by": "@quincylvania",
         "issue": "10"
-      },
-      {
-        "oldId": "parking_p",
-        "newId": "parking_p",
-        "by": "@quincylvania"
-      },
-      {
-        "oldId": "parking_p_with_parking_meter",
-        "newId": "parking_p_with_parking_meter",
-        "by": "@quincylvania"
-      },
-      {
-        "oldId": "parking_p_under_roof",
-        "newId": "parking_p_under_roof",
-        "by": "@quincylvania"
-      },
-      {
-        "newId": "parking_stall_markings_with_parking_p",
-        "by": "@quincylvania",
-        "inspo": "parking_stall_markings"
-      },
-      {
-        "newId": "estacionar_e",
-        "by": "@quincylvania"
-      },
-      {
-        "newId": "estacionar_e_with_parking_meter",
-        "by": "@quincylvania",
-        "inspo": "parking_p_with_parking_meter"
-      },
-      {
-        "newId": "parking_stall_markings_with_estacionar_e",
-        "by": "@quincylvania",
-        "inspo": "parking_stall_markings"
-      },
-      {
-        "newId": "estacionar_e_under_roof",
-        "by": "@quincylvania",
-        "inspo": "parking_p_under_roof"
       },
       {
         "oldId": "crates_under_roof",
