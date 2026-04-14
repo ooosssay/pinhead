@@ -12756,12 +12756,12 @@
         "by": "@quincylvania"
       },
       {
-        "newId": "atm",
+        "newId": "atm_text",
         "by": "@quincylvania",
         "char": "🏧"
       },
       {
-        "newId": "sos",
+        "newId": "sos_text",
         "by": "@quincylvania",
         "char": "🆘"
       },
