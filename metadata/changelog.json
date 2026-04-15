@@ -12850,7 +12850,8 @@
       },
       {
         "newId": "nine_one_one",
-        "by": "@quincylvania"
+        "by": "@quincylvania",
+        "nps": "emergencies"
       },
       {
         "newId": "atm_text",
@@ -12861,6 +12862,56 @@
         "newId": "sos_text",
         "by": "@quincylvania",
         "char": "🆘"
+      },
+      {
+        "newId": "phone_top_right",
+        "by": "@quincylvania",
+        "char": "📞"
+      },
+      {
+        "oldId": "phone_top_right_with_greek_cross",
+        "newId": "phone_top_right_with_greek_cross",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "phone_top_right_with_plus",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "phone_right",
+        "by": "@quincylvania",
+        "nps": "telephone"
+      },
+      {
+        "oldId": "phone_right_with_exclamation_point",
+        "newId": "phone_right_with_exclamation_point",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "phone_right_with_beams_from_receiver",
+        "by": "@quincylvania",
+        "nps": "volume-control-telephone",
+        "temaki": "telephone"
+      },
+      {
+        "oldId": "phone_bottom_right",
+        "newId": "phone_bottom_right",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "phone_down",
+        "by": "@quincylvania"
+      },
+      {
+        "oldId": "phone_and_keyboard",
+        "newId": "phone_down_above_keyboard",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "phone_down_above_sos_text",
+        "by": "@quincylvania",
+        "osmcarto": "amenity/emergency_phone",
+        "osmic": "emergency/emergency-phone"
       },
       {
         "oldId": "person_sitting_in_seat",
