@@ -13001,5 +13001,19 @@
         "issue": "194"
       }
     ]
+  },
+  {
+    "majorVersion": "23",
+    "date": "2026-04-22",
+    "iconChanges": [
+      {
+        "newId": "ankh",
+        "by": "@quincylvania",
+        "char": [
+          "☥",
+          "𓋹"
+        ]
+      }
+    ]
   }
 ]
