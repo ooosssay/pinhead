@@ -13013,6 +13013,14 @@
           "☥",
           "𓋹"
         ]
+      },
+      {
+        "newId": "navigation_arrow_up",
+        "by": "@quincylvania"
+      },
+      {
+        "newId": "navigation_arrow_top_right",
+        "by": "@quincylvania"
       }
     ]
   }
