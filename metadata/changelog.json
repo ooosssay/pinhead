@@ -13021,6 +13021,11 @@
       {
         "newId": "navigation_arrow_top_right",
         "by": "@quincylvania"
+      },
+      {
+        "newId": "wc_text",
+        "by": "@quincylvania",
+        "char": "🚾"
       }
     ]
   }
