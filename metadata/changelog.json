@@ -13023,6 +13023,16 @@
         "by": "@quincylvania"
       },
       {
+        "oldId": "atm_text",
+        "newId": "atm_text",
+        "by": "@quincylvania"
+      },
+      {
+        "oldId": "sos_text",
+        "newId": "sos_text",
+        "by": "@quincylvania"
+      },
+      {
         "newId": "wc_text",
         "by": "@quincylvania",
         "char": "🚾"
