@@ -13050,6 +13050,19 @@
         "pr": "205"
       },
       {
+        "newId": "nine_point_star",
+        "by": [
+          "@ooosssay",
+          "@quincylvania"
+        ],
+        "inspo": "nine_point_star_outline"
+      },
+      {
+        "newId": "nine_point_star_outline",
+        "by": "@ooosssay",
+        "pr": "206"
+      },
+      {
         "newId": "faravahar",
         "by": "@ooosssay",
         "pr": "202"
